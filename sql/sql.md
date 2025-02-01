@@ -7,6 +7,8 @@ Bài này khi chọn Refine your search: là nó sẽ dùng method GET để tru
 ![image](https://github.com/user-attachments/assets/c621cea9-d8ca-457a-a6d1-175d6c691d8d)
 
 <br>
+---------------------------------------
+<br>
 
 ![image](https://github.com/user-attachments/assets/a38e82d1-886a-481b-bab5-008608cc1ff8)
 
@@ -16,6 +18,8 @@ Dùng payload `administrator' OR 1 = 1 -- -` là được vì có vẻ câu truy
 
 ![image](https://github.com/user-attachments/assets/958e5cf7-2906-467c-8a42-1649c3fde2c3)
 
+<br>
+---------------------------------------
 <br>
 
 ![image](https://github.com/user-attachments/assets/07cf2128-84ca-4559-96f2-0d8c3506f4c4)
@@ -37,6 +41,8 @@ Tôi chỉ cần payload `Accessories' UNION SELECT banner, 'a' FROM v$version -
 ![image](https://github.com/user-attachments/assets/8ab3bf06-8be8-448a-9169-29ee8d80c50e)
 
 <br>
+---------------------------------------
+<br>
 
 ![image](https://github.com/user-attachments/assets/4e201e20-f1d8-49fb-b0d6-a61581b5132b)
 
@@ -48,6 +54,8 @@ Dùng payload `Pets' UNION SELECT @@version, 'a' -- -` với bài này:
 
 ![image](https://github.com/user-attachments/assets/7ed85160-bd5f-49a0-a602-81691ba36ba0)
 
+<br>
+---------------------------------------
 <br>
 
 ![image](https://github.com/user-attachments/assets/05ec4e10-3e8d-4a77-a182-b3863a6181b2)
@@ -75,6 +83,8 @@ Dễ thấy bảng này có 3 cột là username, email và password, tôi sẽ 
 ![image](https://github.com/user-attachments/assets/4897c0c3-e61d-4ec9-a0a0-caac13a7d9b5)
 
 <br>
+---------------------------------------
+<br>
 
 ![image](https://github.com/user-attachments/assets/dbc93a60-6e05-46ea-96ac-a0567ff13d5d)
 
@@ -93,6 +103,8 @@ Tiếp tục dùng `lmao' UNION SELECT PASSWORD_UOUWOL, USERNAME_RKYQAE FROM USE
 ![image](https://github.com/user-attachments/assets/0f6330b7-2772-4111-a610-40f11f75d3ed)
 
 <br>
+---------------------------------------
+<br>
 
 ![image](https://github.com/user-attachments/assets/646f54da-55e7-4785-9d15-45ab50328f30)
 
@@ -101,6 +113,8 @@ Bài này mò cột, chắc thế, không biết nữa `Accessories' UNION SELEC
 ![image](https://github.com/user-attachments/assets/51bc96b4-9caa-480a-be0b-9f51a9fbe330)
 
 <br>
+---------------------------------------
+<br>
 
 ![image](https://github.com/user-attachments/assets/36279cc1-2d55-4d47-8953-d9e0dd9b7f59)
 
@@ -108,6 +122,8 @@ Sau khi tôi thử các payload như `Pets' UNION SELECT 'hKZWf0', NULL, NULL --
 
 ![image](https://github.com/user-attachments/assets/3309a052-a850-4fa4-b8f9-568492bf8f67)
 
+<br>
+---------------------------------------
 <br>
 
 ![image](https://github.com/user-attachments/assets/34098d17-b2b1-4545-bc83-ec124aab6122)
@@ -129,6 +145,8 @@ Và cuối cùng là `lmao' UNION SELECT username, password FROM users -- -`
 ![image](https://github.com/user-attachments/assets/c6370d13-434e-4da1-8e16-c941349e85f9)
 
 <br>
+---------------------------------------
+<br>
 
 ![image](https://github.com/user-attachments/assets/9233d3a1-7ccd-4815-b446-7457791d2a17)
 
@@ -144,6 +162,8 @@ Sau khi search qua qua trên mạng thì tôi dùng `lmao'+UNION+SELECT+NULL,use
 
 ![image](https://github.com/user-attachments/assets/d91255cb-3d65-4141-96a7-a8a46ec1b84d)
 
+<br>
+---------------------------------------
 <br>
 
 
