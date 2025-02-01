@@ -156,6 +156,64 @@ Sau khi search qua qua trên mạng thì tôi dùng `lmao'+UNION+SELECT+NULL,use
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/03078756-9b3b-4c6d-9ec7-93f16ddcb295)
+
+![image](https://github.com/user-attachments/assets/003f9eca-0da1-43a6-a050-4f7695a8d1c8)
+
+Tôi sẽ phải để tâm đến chữ Welcome này và tracking id theo đề bài:
+
+![image](https://github.com/user-attachments/assets/d7f782c1-0365-498d-8205-952bd28525ea)
+
+![image](https://github.com/user-attachments/assets/620cf9f0-1e49-487b-be24-c49779a3be8b)
+
+Nếu đúng tracking id thì có chữ welcome back và ngược lại:
+
+![image](https://github.com/user-attachments/assets/12acaeb5-715a-4576-957b-65770fb48da1)
+
+![image](https://github.com/user-attachments/assets/b6f1298b-04fe-44cd-a7fa-5eea1ab72988)
+
+Thử với `lmao' OR '1' = '1` thì có sqli:
+
+![image](https://github.com/user-attachments/assets/a427992a-16aa-4614-8b8e-a1c58609a031)
+
+Tóm tắt lại thì nếu điều kiện đúng thì sẽ có welcome back và ngược lại là không có, từ đây tôi dùng payload `lmao' OR (SELECT SUBSTRING(password,{i},1) FROM users WHERE username='administrator')='{char}` trong đây i là số thứ tự của kí tự, char là kí tự kiểm tra, vì mò từng từ mà dùng burp thì hơi mất thời gian (hoặc do tôi không biết dùng) nên tôi code 1 đoạn python để chạy tự động:
+
+![image](https://github.com/user-attachments/assets/ad77ccfa-2a8b-4910-9209-0e06c262c91a)
+
+Bảng chữ thử gồm abcdefghijklmnopqrstuvwxyz0123456789 vì hint bảo mật khẩu chỉ có viết thường và số, chữ A ở cuối để check rằng xem kết thúc mật khẩu chưa, trong lúc đợi thì tôi có dùng payload `lmao' OR (SELECT 'a' FROM users WHERE username='administrator' AND LENGTH(password)=20)='a` mò và ra được pass dài 20 kí tự:
+
+![image](https://github.com/user-attachments/assets/776a30de-f812-4405-817c-16a7c357b896)
+
+Và đã ra:
+
+![image](https://github.com/user-attachments/assets/624deec3-2d69-4f29-92a5-25fb680cef2b)
+
+Nhập vào để check, code python thì tôi để với tên là blindSQLinjectionwithconditionalresponses.py:
+
+![image](https://github.com/user-attachments/assets/a786b482-815f-4f3a-982c-da99fa587348)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
