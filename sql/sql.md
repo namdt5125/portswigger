@@ -195,20 +195,40 @@ Nhập vào để check, code python thì tôi để với tên là blindSQLinje
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/3f52996e-e65a-4a37-905d-e1b6aa659561)
 
+Giao diện như bài trước:
 
+![image](https://github.com/user-attachments/assets/aa166338-76f5-4e30-bf72-6b52c0665e6d)
 
+Bắt tạm cái request để nghịch trước đã:
 
+![image](https://github.com/user-attachments/assets/7914e24b-9642-4c13-a86c-8d56bf8e2ba0)
 
+Dễ thấy nhất là khi tôi thêm cái dấu ' vào TrackingId là nó bị lỗi
 
+![image](https://github.com/user-attachments/assets/4ea25275-46ce-4a1c-985e-3f7f516ffda8)
 
+Còn đối với `TrackingId=qEqtt92AGDpmILiJ' OR 1 = 1 -- -` hoặc `TrackingId=qEqtt92AGDpmILiJ' OR '1' = '1` thì không có hiện tượng gì xảy ra 
 
+![image](https://github.com/user-attachments/assets/439a3450-d400-4d00-82d5-baeef5b421fa)
 
+Vậy tôi sẽ lợi dụng lỗi để khai thác lỗi
 
+![image](https://github.com/user-attachments/assets/5aa02d7a-6963-476e-92f1-1ca6b103ccda)
 
+Giải thích qua về payload `lmao' OR (SELECT CASE WHEN SUBSTR(password,1,1)='a' THEN 1/0 ELSE NULL END FROM users WHERE username='administrator') IS NOT NULL --` thì tôi sử dụng toán tử OR và phần còn lại là lấy kí tự đầu tiên trong cột password ánh xạ với cột admin, nếu kí tự đó là a thì 1/0 tức là lỗi sẽ xảy ra, nếu không phải thì không có gì xảy ra, ở cuối tôi thêm IS NOT NULL để đảm bảo rằng nó không rỗng, nếu thiếu cái nó sẽ lỗi cú pháp và không trở thành 1 điều kiện hợp lệ, còn dấu -- là loại bỏ ' ở cuối. bắt đầu test với burp intruder:
 
+![image](https://github.com/user-attachments/assets/87278229-d1c7-4209-9ce8-ff7fdf48d9a9)
 
+Đã bắt được kí tự t đầu tiên! Vì tôi chả rảnh để ngồi mò từng kí tự trong burp intruder này nên tôi code tạm 1 đoạn python để treo đó:
 
+![image](https://github.com/user-attachments/assets/0d38e78b-6051-47ed-be61-80890f203d2c)
+
+![image](https://github.com/user-attachments/assets/fb851218-bb15-4279-90c0-6f2708ae23e2)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
