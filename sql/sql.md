@@ -233,21 +233,48 @@ Giải thích qua về payload `lmao' OR (SELECT CASE WHEN SUBSTR(password,1,1)=
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/d79537ff-fa41-4eba-875b-fd64a358e8e3)
 
+Như bài trước, tôi cũng test với `gE6tOLwYzmJqyFvr' OR '1'='1` và `gE6tOLwYzmJqyFvr'` thì là các kết quả khác nhau:
 
+![image](https://github.com/user-attachments/assets/71c2d204-1d37-42c9-9014-2c7496540fc7)
 
+![image](https://github.com/user-attachments/assets/501c7307-cf03-4d4e-aacb-586a05a6ee79)
 
+Khi tôi dùng payload của bài trước thì ăn lỗi, có vẻ liên quan tới kiểu giá trị:
 
+![image](https://github.com/user-attachments/assets/db7fd551-d4c5-495a-bf6f-986cc0ed56fe)
 
+Tôi sẽ thử sử dụng CAST để ép kiểu:
 
+![image](https://github.com/user-attachments/assets/644b1cac-4cd0-494b-a22c-70d7b1b2b703)
 
+![image](https://github.com/user-attachments/assets/dc6da20b-a2ae-441d-a8cf-3d95f3489ae5)
 
+Tôi dùng payload `gE6tOLwYzmJqyFvr' OR CAST((SELECT 1) AS int) -- -` thì yêu cầu bắt buộc phải là kiểu boolean
 
+![image](https://github.com/user-attachments/assets/1affeb29-5b20-4601-8257-923ac26c2478)
 
+Tôi thêm `gE6tOLwYzmJqyFvr' OR CAST((SELECT 1) AS int)=2 -- -` vào là ok, không ăn lỗi
 
+![image](https://github.com/user-attachments/assets/5a154734-3b75-4262-8d22-7777080e5c5d)
 
+![image](https://github.com/user-attachments/assets/e166eb0a-380f-4688-b057-5ec4cb34a3a0)
 
+Thử mấy cái payload khác vẫn ăn lỗi:v, bí quá đọc thử solution thì ngó được payload `' AND 1=CAST((SELECT username FROM users) AS int)--`
 
+![image](https://github.com/user-attachments/assets/ef0c5133-0e0f-4bd4-9500-46f8fe2bca50)
 
+Có vẻ cái kia lấy về cả đống password, tôi thử đổi sang `' AND 1=CAST((SELECT password FROM users WHERE username='administrator') AS int) --`
 
+![image](https://github.com/user-attachments/assets/c5fa4d15-e8c1-4b4b-972a-125064a47e06)
+
+Ăn lỗi tiếp, nhưng khi dùng `' AND 1=CAST((SELECT password FROM users LIMIT 1) AS int)--` lại có thể ra được password ở phần lỗi:
+
+![image](https://github.com/user-attachments/assets/73adbbb0-4da0-4cd8-a671-ee1403e3e9dd)
+
+Căn bản thì đây là blackbox nên không biết cái câu query nó trông như nào
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
