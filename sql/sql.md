@@ -221,11 +221,14 @@ Giải thích qua về payload `lmao' OR (SELECT CASE WHEN SUBSTR(password,1,1)=
 
 ![image](https://github.com/user-attachments/assets/87278229-d1c7-4209-9ce8-ff7fdf48d9a9)
 
-Đã bắt được kí tự t đầu tiên! Vì tôi chả rảnh để ngồi mò từng kí tự trong burp intruder này nên tôi code tạm 1 đoạn python để treo đó:
+Đã bắt được kí tự t đầu tiên! Vì tôi chả rảnh để ngồi mò từng kí tự trong burp intruder này nên tôi code tạm 1 đoạn python để treo đó, tên file tôi để là blindSQLinjectionwithconditionalerrors.py
 
 ![image](https://github.com/user-attachments/assets/0d38e78b-6051-47ed-be61-80890f203d2c)
 
 ![image](https://github.com/user-attachments/assets/fb851218-bb15-4279-90c0-6f2708ae23e2)
+
+Ở phần solution của portswigger có dùng payload `TrackingId=xyz'||(SELECT CASE WHEN LENGTH(password)>1 THEN to_char(1/0) ELSE '' END FROM users WHERE username='administrator')||'
+` dùng nối các kí tự lại với nhau thay vì dùng toán tử và dùng to_char(1/0), nói chung là đều ra được kết quả
 
 <h1>---------------------------------------------------------</h1>
 <br>
