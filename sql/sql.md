@@ -278,3 +278,31 @@ Căn bản thì đây là blackbox nên không biết cái câu query nó trông
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/1df9e84d-7006-445d-b8cb-481151ca7faf)
+
+Sau khi thử đống payload liên quan đến sleep, bần quá nên tôi mở cái solution thì nó là PostgreSQL và dùng || để nối...
+
+![image](https://github.com/user-attachments/assets/f0358c9d-9c2b-42c5-9e9f-787a60768672)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/7091ba23-bb8d-43ab-abfe-d8ddd733845b)
+
+Không biết do đề như thế hay có lỗi gì nhưng khi tôi để sleep là 1 số nào đó thì thời gian trả về là thời gian đó x2, test nhiều lần nên khá chắc là thế 
+
+![image](https://github.com/user-attachments/assets/f91b8cb6-3478-40cc-8a0f-2feb87ecba63)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
