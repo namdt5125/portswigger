@@ -188,7 +188,7 @@ Và đã ra:
 
 ![image](https://github.com/user-attachments/assets/624deec3-2d69-4f29-92a5-25fb680cef2b)
 
-Nhập vào để check, code python thì tôi để với tên là `blindSQLinjectionwithconditionalresponses.py`:
+Nhập vào để check, code python thì tôi để với tên là `blindSQLInjectionWithConditionalResponses.py`:
 
 ![image](https://github.com/user-attachments/assets/a786b482-815f-4f3a-982c-da99fa587348)
 
@@ -221,7 +221,7 @@ Giải thích qua về payload `lmao' OR (SELECT CASE WHEN SUBSTR(password,1,1)=
 
 ![image](https://github.com/user-attachments/assets/87278229-d1c7-4209-9ce8-ff7fdf48d9a9)
 
-Đã bắt được kí tự t đầu tiên! Vì tôi chả rảnh để ngồi mò từng kí tự trong burp intruder này nên tôi code tạm 1 đoạn python để treo đó, tên file tôi để là `blindSQLinjectionwithconditionalerrors.py`
+Đã bắt được kí tự t đầu tiên! Vì tôi chả rảnh để ngồi mò từng kí tự trong burp intruder này nên tôi code tạm 1 đoạn python để treo đó, tên file tôi để là `blindSQLInjectionWithConditionalErrors.py`
 
 ![image](https://github.com/user-attachments/assets/0d38e78b-6051-47ed-be61-80890f203d2c)
 
@@ -301,7 +301,7 @@ Do mấy bài trước chỉ có chữ thường và số nên bài này tôi c�
 
 ![image](https://github.com/user-attachments/assets/553deaeb-754f-457e-87ca-11a4ce5ab2f8)
 
-Xong, code tôi để tên là `blindSQLinjectionwithtimedelaysandinformationretrieval.py`
+Xong, code tôi để tên là `blindSQLInjectionWithTimeDelaysAndInformationRetrieval.py`
 
 <h1>---------------------------------------------------------</h1>
 <br>
