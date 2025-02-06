@@ -12,5 +12,40 @@ Code không thấy được mã hóa và có dấu ' đi kèm theo, tôi thử p
 
 ![image](https://github.com/user-attachments/assets/dc5de93e-f5bc-407c-9e21-2c46567db1d5)
 
+![image](https://github.com/user-attachments/assets/6117369b-9649-48c0-84dc-a125a57a9fc1)
+
+Solution thì ngắn hơn, chắc do tôi nghĩ quá lên
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/754de353-3cfc-45dc-9acb-1f7e612f3d79)
+
+![image](https://github.com/user-attachments/assets/6d68b090-336c-4f6f-bd46-b13b58ce45c5)
+
+Giao diện là các blog với button view ở dưới, và khi vào thì có chỗ comment
+
+![image](https://github.com/user-attachments/assets/7f14671e-6cdd-4439-9222-b9e46129599b)
+
+Sau khi comment thì nó ở đây 
+
+![image](https://github.com/user-attachments/assets/b8ac084e-5042-4cdf-8b64-3ed9af9da170)
+
+![image](https://github.com/user-attachments/assets/e56d85f9-694f-42a3-a2cd-5aafb0e68277)
+
+![image](https://github.com/user-attachments/assets/4dac3fd5-8646-4374-a06f-7738e2fb43ca)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
 
 
