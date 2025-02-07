@@ -38,6 +38,47 @@ Sau khi comment thì nó ở đây
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/354960b9-465d-4868-94de-9f856ffae6f0)
+
+![image](https://github.com/user-attachments/assets/796f8ca4-d358-4b6e-8b89-5ca450c4bc72)
+
+Giao diện có ô để nhập, tôi thử chức năng và xem mã nguồn
+
+![image](https://github.com/user-attachments/assets/4f7d52ab-76f5-44c9-a1e4-be50d6be6096)
+
+![image](https://github.com/user-attachments/assets/43e5b066-6a58-43ac-8f6c-a642a8bfac53)
+
+Tôi thử với payload ngắn `<script>alert(1337)</script>` và đã bị được mã hóa
+
+![image](https://github.com/user-attachments/assets/87915969-3e09-43de-9c5c-a1ce35338cbd)
+
+![image](https://github.com/user-attachments/assets/070e6236-e41d-415b-827d-3ec1509de1f5)
+
+Tôi thử payload `<img src="lmao" onerror="alert(1337);">` thì được
+
+![image](https://github.com/user-attachments/assets/e15f72ac-f643-4ebc-9de1-fbcb755c3489)
+
+Hoặc là dùng `"><svg onload=alert(1)>` theo solution
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
