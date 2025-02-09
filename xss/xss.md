@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/594af6d7-14d6-46bb-8ca1-849dbca3dbec)
+![image](https://github.com/user-attachments/assets/d7bcadf8-b063-46a4-930c-c6621899da8f)![image](https://github.com/user-attachments/assets/594af6d7-14d6-46bb-8ca1-849dbca3dbec)
 
 ![image](https://github.com/user-attachments/assets/d2d037fc-8fe8-4d57-86fe-0391b2053160)
 
@@ -102,6 +102,41 @@ Khai thác từ phần submit feedback
 
 <h1>---------------------------------------------------------</h1>
 <br>
+
+![image](https://github.com/user-attachments/assets/8f145eda-5241-40c6-b12d-66c7c64567a5)
+
+![image](https://github.com/user-attachments/assets/8ea46627-d927-490b-a2ff-04fff7df40cf)
+
+Đầu tiên $(window).on('hashchange', function() là để lắng nghe khi phần hash tức là # trong URL được thay đổi, nó sẽ tự động lăn xuống bài viết chứa nội dung đó, chính là cả cái blog-list kia, ở trong thẻ <h2>, window.location.hash.slice(1) là trả về phần hash của URL bao gồm cả dấu #, ví dụ dễ hiểu:
+
+![image](https://github.com/user-attachments/assets/b5310f2e-2410-4e8f-b99a-596c8a896410)
+
+![image](https://github.com/user-attachments/assets/51a27eaa-95c8-4881-87de-f3fe09d524cb)
+
+Hoặc cũng có thể 1 phần trong cái chuỗi dài dài đấy do có cái :contains, còn đoạn sau là nó làm việc với URL để lấy ra nội dung, bỏ dấu # do có slice(1), lấy từ vị trí thứ 2 còn cái `if (post) post.get(0).scrollIntoView();` thì là nhảy xuống bài post đầu tiên chứa cái chuỗi đấy thôi 
+
+![image](https://github.com/user-attachments/assets/5f4212c3-1545-46b2-bc1e-6fd22f435201)
+
+Dùng payload `#lmao" <img src="lmaoo" onerror="alert(1337)">` là được, để bảo dùng print() nên tôi đổi thành `#lmao" <img src="lmaoo" onerror="print()">`, do lần đầu nên chả biết solve kiểu gì, tôi vào xem cái solution thì nó bảo exploit:
+
+![image](https://github.com/user-attachments/assets/ccd200cb-a603-42d7-b9a0-cec6852cb4d4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
