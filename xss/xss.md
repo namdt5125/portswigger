@@ -44,19 +44,13 @@ Sau khi comment thì nó ở đây
 
 Giao diện có ô để nhập, tôi thử chức năng và xem mã nguồn
 
+![image](https://github.com/user-attachments/assets/ef70974c-20ab-4ecc-904a-0f7ffd5fbe85)
+
 ![image](https://github.com/user-attachments/assets/4f7d52ab-76f5-44c9-a1e4-be50d6be6096)
 
-![image](https://github.com/user-attachments/assets/43e5b066-6a58-43ac-8f6c-a642a8bfac53)
+Ở trong mã nguồn thì bài này dùng document.write để lấy đầu vào từ location.search, query chính là cái được lấy từ parameter search, thứ mà tôi nhập vào và có 1 cái thẻ img trong đó, tôi sẽ sử dụng payload `aaaa"> <img src="lmao" onerror="alert(1337)`, cái aaaa"> là để đóng thẻ cũ, sau đó mở thẻ mới và do trong mã nguồn có sẵn "> nên tôi không cần thêm vào, thêm vào nó bị thừa
 
-Tôi thử với payload ngắn `<script>alert(1337)</script>` và đã bị được mã hóa
-
-![image](https://github.com/user-attachments/assets/87915969-3e09-43de-9c5c-a1ce35338cbd)
-
-![image](https://github.com/user-attachments/assets/070e6236-e41d-415b-827d-3ec1509de1f5)
-
-Tôi thử payload `<img src="lmao" onerror="alert(1337);">` thì được
-
-![image](https://github.com/user-attachments/assets/e15f72ac-f643-4ebc-9de1-fbcb755c3489)
+![image](https://github.com/user-attachments/assets/a30467cc-7c11-4f0b-a741-fc7d3119b249)
 
 Hoặc là dùng `"><svg onload=alert(1)>` theo solution
 
