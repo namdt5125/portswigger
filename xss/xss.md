@@ -57,26 +57,48 @@ Hoặc là dùng `"><svg onload=alert(1)>` theo solution
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/19af90be-7e78-4f59-a354-7f90d1d318d5)
 
+![image](https://github.com/user-attachments/assets/be2214f4-2ed3-40c0-9071-6db2e87d6f0e)
 
+![image](https://github.com/user-attachments/assets/4596f09d-a2cb-455e-a690-9d42c3a27495)
 
+Bài này khác bài trước ở chỗ là dùng document.getElementById('searchMessage').innerHTML = query; 
 
+![image](https://github.com/user-attachments/assets/98989063-c11e-41f7-9466-bb5fc28c83b4)
 
+Đây là điểm khác biệt giữa 2 cái
 
+![image](https://github.com/user-attachments/assets/93b8c3d4-86e2-4fe1-9dda-f952ae2a4a39)
 
+Sau khi tôi nhập `<script>alert(1337)</script>` thì không thấy, tôi dùng payload `aaaa"> <img src="lmao" onerror="alert(1337)">` thì ra:
 
+![image](https://github.com/user-attachments/assets/fab5fb62-da33-4b89-8413-f3c1bb092c14)
 
+Payload của solution cũng thế
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/f0f74602-4134-4702-a22d-86f230670eb6)
 
+Khai thác từ phần submit feedback 
 
+![image](https://github.com/user-attachments/assets/846b74d9-90db-4221-a30d-f77233d3541c)
 
+Đại khái thì là `$('#backLink')` là  `<a id="backLink">Back</a>`, attr trong jQuery được dùng để lấy hoặc thiết lập giá trị của thuộc tính, trong đây tức là thiết lập giá trị href là window.location.search chính là cái returnPath 
 
+![image](https://github.com/user-attachments/assets/9507d160-c6b1-4197-85f7-c59af406083d)
 
+![image](https://github.com/user-attachments/assets/df1f2521-044c-40b9-a879-6e70e3e6daa1)
 
+Để dễ hiểu hơn thì khi tôi nhập https://www.google.com/ vào returnPath và ấn vào Back thì nó đưa đến google.com vì khi tôi ấn cái Back là tôi thực thi lệnh 
 
+![image](https://github.com/user-attachments/assets/8e57ce77-f42d-4fd8-9cb2-08836f035b7a)
 
+Đây là tôi thử với payload `<script>alert(1337)</script>`, tôi nghĩ tôi sẽ thử các payload khác, khi tôi thử đến javascript:alert(1337); thì nó không cho tôi chèn vì chrome nó cấm, sử dụng `javascript:alert(document.cookie)` ở trong burp
 
+![image](https://github.com/user-attachments/assets/cc7cd68d-0265-40c0-b004-21ab8f265cd6)
 
 
 
