@@ -96,11 +96,12 @@ Khai thác từ phần submit feedback
 
 ![image](https://github.com/user-attachments/assets/8e57ce77-f42d-4fd8-9cb2-08836f035b7a)
 
-Đây là tôi thử với payload `<script>alert(1337)</script>`, tôi nghĩ tôi sẽ thử các payload khác, khi tôi thử đến javascript:alert(1337); thì nó không cho tôi chèn vì chrome nó cấm, sử dụng `javascript:alert(document.cookie)` ở trong burp
+Đây là tôi thử với payload `<script>alert(1337)</script>`, rõ ràng là không được vì nó chính là copy paste cái payload đó trên thanh trình duyệt, khi tôi thử đến javascript:alert(1337); thì nó không cho tôi chèn vì chrome nó cấm, sử dụng `javascript:alert(document.cookie)` ở trong burp, dùng `javascript:alert(document.cookie)` là vì cái này nó thực thi trên thanh trình duyệt, đối với cũ thì được còn mấy cái mới thế này thì nó không cho
 
 ![image](https://github.com/user-attachments/assets/cc7cd68d-0265-40c0-b004-21ab8f265cd6)
 
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
