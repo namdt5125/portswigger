@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d7bcadf8-b063-46a4-930c-c6621899da8f)![image](https://github.com/user-attachments/assets/594af6d7-14d6-46bb-8ca1-849dbca3dbec)
+![image](https://github.com/user-attachments/assets/eae5fabd-d9d5-4e88-9226-a1cdb3b2d491)![image](https://github.com/user-attachments/assets/d7bcadf8-b063-46a4-930c-c6621899da8f)![image](https://github.com/user-attachments/assets/594af6d7-14d6-46bb-8ca1-849dbca3dbec)
 
 ![image](https://github.com/user-attachments/assets/d2d037fc-8fe8-4d57-86fe-0391b2053160)
 
@@ -121,18 +121,46 @@ Dùng payload `#lmao" <img src="lmaoo" onerror="alert(1337)">` là được, đ�
 
 ![image](https://github.com/user-attachments/assets/ccd200cb-a603-42d7-b9a0-cec6852cb4d4)
 
+Giờ thì được rồi
 
+![image](https://github.com/user-attachments/assets/0f2c63cc-cef1-4f65-b0a0-f0647a665a07)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/166feb60-cc43-4413-98f5-dea213bdc3a7)
 
+Sau khi tôi search aaaa thì nó ra value là aaaa 
 
+![image](https://github.com/user-attachments/assets/34bea22b-892c-435e-b59e-330b95734f3e)
 
+Dấu > được mã hóa thành `&gt;`:
 
+![image](https://github.com/user-attachments/assets/9b8d07d1-b2ae-45b1-9e91-dadf5680fb92)
 
+Có vẻ khó để bypass, thôi thì dùng tạm cách khác làm sao không liên quan đến dấu <>, khi tôi nhập " vào thì màu ở chỗ value lạ lắm:
 
+![image](https://github.com/user-attachments/assets/6fd318a3-c0a1-4418-a9d8-3254e4134d95)
 
+![image](https://github.com/user-attachments/assets/382aa3c1-a556-44d8-85e7-8eaeca4f4634)
 
+Tôi vứt lên cái html editor của w3school cho dễ nhìn hơn, có vẻ tôi sẽ phải kiếm payload nào có dấu " để thoát khỏi string trong value mà không liên quan đến <>
 
+![image](https://github.com/user-attachments/assets/2f961c2f-ddd3-4519-a338-49816ebeb286)
+
+Tôi search được cái này và tôi test thử payload `"onclick="alert(1337);`, dấu " ở đầu là đóng hết cho value, thêm gì đó vào trước " cũng được, tùy, ở cuối không có " do cái dấu đóng " ở value có sẵn rồi, và alert sẽ xuất hiện khi ấn vào ô tìm kiếm:
+
+![image](https://github.com/user-attachments/assets/fe5cfd11-f816-4be1-9f07-2067ba06327a)
+
+Hint bảo là phải hoạt động với nạn nhân, tôi thấy trong số các event thì cái onmouseout là nguy hiểm nhất vì chỉ cần di chuyển chuột là xuất hiện alert 
+
+![image](https://github.com/user-attachments/assets/7b922f29-bbda-4751-8b2b-c2f6ef471aaa)
+
+![image](https://github.com/user-attachments/assets/85b02494-6c06-4a8a-b263-8c9390eb1e68)
+
+Tôi lay hoay không biết sao nó chưa hiện cái solve thì hóa ra tôi dùng nhầm onmouseout thay vì onmouseover, nhìn nhầm
+
+![image](https://github.com/user-attachments/assets/738c5c67-033e-4c92-ae8c-3f91cc1bb01a)
 
 
 
