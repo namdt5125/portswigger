@@ -188,23 +188,30 @@ Không chứa <>" và lại còn liên quan đến thanh trình duyệt thì tô
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/cc9cc861-553f-4234-b2e4-673008157d3b)
 
+![image](https://github.com/user-attachments/assets/13236c10-352a-4555-a282-1a0e7e920ff8)
 
+Đại khái thì nó lấy cái giá trị của searchTerms thôi, khi tôi nhập dấu > thì bị mã hóa thành `&gt;` nhưng mà lại không mã hóa dấu "
 
+![image](https://github.com/user-attachments/assets/34815687-9bd8-44a9-83c8-b5b4058084eb)
 
+Nhìn ở chỗ document.write thì có vẻ tôi sẽ khai thác được gì đó từ dấu " với payload `aa" onerror="alert(1)`, và không thấy xảy ra cái gì 
 
+![image](https://github.com/user-attachments/assets/42e077df-87f9-48a7-a677-2c9d28ee8a60)
 
+Gà quá nên tôi coi solution 1 chút thì thấy `'-alert(1)-'`
 
+![image](https://github.com/user-attachments/assets/02f06c65-f9d5-4d93-9e0e-260c1de62c82)
 
+Có thể thay 2 dấu - thành dấu khác như + / % & * |, mấy cái liên quan đến phép tính ấy, vì cái đường dẫn sẽ trở thành src="/resources/images/tracker.gif?searchTerms=-alert(1)- và nó là đường dẫn hợp lệ, để dê hiểu hơn thì https://security.stackexchange.com/questions/196096/why-does-my-stack-contain-the-return-address-to-libc-csu-init-after-main-is-in đây là đường dẫn hợp lệ và có dấu - trong đó, đôi khi có thể 1 số web sẽ dùng dấu + *..., vậy nên có xuất hiện 2 dấu - kia để lưu không đánh động đến cái alert(1), dấu ' kia thì trong document.write nên biết rồi, việc làm như này là để lợi dụng thẻ script ở ngoài 
 
+![image](https://github.com/user-attachments/assets/5c724f43-3dca-4994-88e5-a0a5710c61b2)
 
+Cái thẻ tôi bôi đen ấy, nó dùng để thực thi cái alert bên trong nên là cái đấy nó chạy được, vậy thôi, nên dùng alert(window.origin) thay vì cái khác, còn lý do thì trên youtube có
 
-
-
-
-
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
