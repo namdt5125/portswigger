@@ -162,6 +162,68 @@ Tôi lay hoay không biết sao nó chưa hiện cái solve thì hóa ra tôi d�
 
 ![image](https://github.com/user-attachments/assets/738c5c67-033e-4c92-ae8c-3f91cc1bb01a)
 
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/7aa47588-8d86-46fc-8a40-87e904a630a6)
+
+Vào chức năng của comment và dùng thử 
+
+![image](https://github.com/user-attachments/assets/fff069ca-7d2f-43e0-9b66-311d6efec6f9)
+
+![image](https://github.com/user-attachments/assets/0dd4fb52-794f-4f08-8de0-d08b76eae5d3)
+
+Để ý đến phần website thì chức năng của nó là gắn vào tên, khi ấn vào tên là dẫn đến đường dẫn đó luôn, tôi thử luôn với payload `"><img src="xss" onerror="alert(1)` thì thấy đã được xử lý dấu <>" nên không làm gì được
+
+![image](https://github.com/user-attachments/assets/2798357c-0f67-4e06-b8f0-4b707b74034e)
+
+Không chứa <>" và lại còn liên quan đến thanh trình duyệt thì tôi nghĩ ngay tới javascript:
+
+![image](https://github.com/user-attachments/assets/b12d82b4-48d0-401d-b0e8-3cb962971974)
+
+![image](https://github.com/user-attachments/assets/b4bacbce-85fb-4997-b464-b309f878ed60)
+
+Đã solve
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
