@@ -233,6 +233,47 @@ Và chỉ vậy thôi
 
 ![image](https://github.com/user-attachments/assets/25853b23-ae8b-4e4b-b5d6-cb4dd4b7cdbd)
 
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/f162e2a1-8cd1-4812-9f9a-a6a7fdb028c7)
+
+Cái web này nó mã hóa <>" rồi nên phải dùng cách không liên quan đến mấy cái dấu đấy, dùng cái Wappalyzer thì có thấy AngularJS 
+
+![image](https://github.com/user-attachments/assets/a926a19e-be91-4543-96d4-ffd8d345b7d8)
+
+Tra trên mạng thêm về cái AngularJS expression
+
+![image](https://github.com/user-attachments/assets/39a61d6e-9e00-4c24-8885-2ce491091661)
+
+Khi tôi thử `{{ 5 + 5 }}` vào thì kết quả trả lại à 10 
+
+![image](https://github.com/user-attachments/assets/0d1e4ab2-c1de-43a6-9a3b-0d7c6eac0170)
+
+Đây là kết quả sau khi tôi dùng payload `{{alert(window.origin)}}`
+
+![image](https://github.com/user-attachments/assets/282489e4-fe5c-403b-90ed-635005474ed0)
+
+Tôi lên gg và search được 1 trang của HackerOne, [đây](https://hackerone.com/reports/141463)
+
+![image](https://github.com/user-attachments/assets/517f7e6c-5ea5-4cea-abcc-872e2facc0cf)
+
+![image](https://github.com/user-attachments/assets/44adbafd-ba7a-4236-b8f0-db6980840553)
+
+Tôi đổi cái dấu [[ thành {{ và payload nó như này `{{constructor.constructor('alert(window.origin)')()}}`
+
+![image](https://github.com/user-attachments/assets/b2fb1c46-b54b-4192-b89d-ec5044e682cd)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
 
 
 
