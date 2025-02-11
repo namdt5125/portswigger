@@ -8,7 +8,7 @@ Vào thì thấy 1 cái ô nhập, tôi nhập thử thì dòng chữ có hiện
 
 ![image](https://github.com/user-attachments/assets/5fa498b4-a823-4cef-9794-da11dbf1df40)
 
-Code không thấy được mã hóa và có dấu ' đi kèm theo, tôi thử payload `a' </h1> <script>alert('abc')</script> <h1>'lmao`, a' </h1> để kết thúc cái thẻ cũ và làm hẳn cái script mới, <h1> đằng sau là để nối cái đuôi </h1>
+Code không thấy được mã hóa và có dấu ' đi kèm theo, tôi thử payload `a' </h1> <script>alert('abc')</script> <h1>'lmao`, `a' </h1>` để kết thúc cái thẻ cũ và làm hẳn cái script mới, `<h1>` đằng sau là để nối cái đuôi
 
 ![image](https://github.com/user-attachments/assets/dc5de93e-f5bc-407c-9e21-2c46567db1d5)
 
@@ -208,14 +208,30 @@ Có thể thay 2 dấu - thành dấu khác như + / % & * |, mấy cái liên q
 
 ![image](https://github.com/user-attachments/assets/5c724f43-3dca-4994-88e5-a0a5710c61b2)
 
-Cái thẻ tôi bôi đen ấy, nó dùng để thực thi cái alert bên trong nên là cái đấy nó chạy được, vậy thôi, nên dùng alert(window.origin) thay vì cái khác, còn lý do thì trên youtube có
+Cái thẻ tôi bôi đen ấy, nó dùng để thực thi cái alert bên trong nên là cái đấy nó chạy được, vậy thôi
 
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/c805b10c-3d7d-4a17-9a38-b89faf42f5e0)
 
+![image](https://github.com/user-attachments/assets/2e7327a6-77f9-4a68-a7c2-3866bf8e6160)
 
+![image](https://github.com/user-attachments/assets/8beb273c-6207-4ce1-bf78-aa69638273b8)
 
+Trong đoạn code này, có 1 list là tores = ["London","Paris","Milan"], nó lấy giá trị từ tham số storeId, nếu store tồn tại, nó được thêm làm một <option> được chọn, để ví dụ dễ hiểu thì nếu để storeId là hello hay gì đó thì ở chỗ chọn sẽ xuất hiện:
+
+![image](https://github.com/user-attachments/assets/3fa68b8a-f7d4-4e2e-9cce-f07cc30022c5)
+
+![image](https://github.com/user-attachments/assets/50d60e95-1c8a-4f88-b409-e7e228b9d393)
+
+Và cả cái này bên trong thẻ select 
+
+![image](https://github.com/user-attachments/assets/b50c575e-a652-4cca-b57e-21c9989a2ef8)
+
+Và chỉ vậy thôi
+
+![image](https://github.com/user-attachments/assets/25853b23-ae8b-4e4b-b5d6-cb4dd4b7cdbd)
 
 
 
