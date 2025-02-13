@@ -360,7 +360,7 @@ Tôi tìm được quả payload `<custom id=x onfocus=alert(document.cookie) ta
 
 ![image](https://github.com/user-attachments/assets/8e656d8f-d588-498b-8ce1-16fe0a37d544)
 
-Tôi gà quá nghĩ không ra, xem solution thì thấy có thêm cả #x vào cuối payload 
+Tôi gà quá nghĩ không ra, xem solution thì thấy có thêm cả #x vào cuối payload, vì cái đấy để nó tập trung vào cái x kia, nó sẽ tự động chạy xss luôn, còn không có thì không tự động, phải làm thủ công
 
 ![image](https://github.com/user-attachments/assets/1775a5da-1692-4c16-b743-253e8eae0fb4)
 
@@ -371,6 +371,48 @@ location = 'https://YOUR-LAB-ID.web-security-academy.net/?search=%3Cxss+id%3Dx+o
 Payload ở solution đây
 
 ![image](https://github.com/user-attachments/assets/c3fba808-32c1-4dbb-8d32-e49aa091b31a)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/10166b71-96a8-491d-8a1c-313fe7fabf9f)
+
+![image](https://github.com/user-attachments/assets/f7e6a8ed-b6a1-4432-b8be-20fd4100d515)
+
+Đề bảo thả cho cái tag svg, tôi lấy tạm trên mạng vứt bừa vào thì ra:
+
+![image](https://github.com/user-attachments/assets/a99432bc-0dd2-4c6f-b17e-c5e99420a0ea)
+
+Chặn rồi, chặn cái onfocus rồi
+
+![image](https://github.com/user-attachments/assets/eb0cf782-fee1-4579-9d4e-864f710a3274)
+
+![image](https://github.com/user-attachments/assets/8297cb39-3eb0-4937-9ca6-3b04d882974b)
+
+Ưtf
+
+![image](https://github.com/user-attachments/assets/ed967bbb-6db9-4de9-9b30-2e280c77e498)
+
+Nãy đang hí hoáy dùng intruder cơ mà lỗi không hiển thị ô tấn công nên tắt đi bật lại, vào thì thấy nó giải xong 
+
+![image](https://github.com/user-attachments/assets/dd6c9f33-f6f1-4dc6-959e-cc2ed2e6d1dd)
+
+Payload đây `<svg><animatetransform onbegin=alert(1) attributeName=transform>`, nó không có chặn animatetransform và onbegin chỉ kích hoạt khi có mấy cái như animatetransform
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
