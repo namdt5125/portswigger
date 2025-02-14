@@ -464,20 +464,34 @@ Tự nhiên tôi thắc mắc sao nó không ngăn cả dấu <> các thứ?
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/199701f5-1929-48b4-85ee-04b286c72d6b)
 
+Dấu " và >< đã được filter và vẫn giữa ' nhưng dấu \ không bị filter 
 
+![image](https://github.com/user-attachments/assets/8c2b6ffa-6cea-4160-8821-670c2b2183e2)
 
+![image](https://github.com/user-attachments/assets/b9e52e95-3175-4053-be11-5ed757fc882c)
 
+Tôi nhập vào aaaa\' trong code sẽ filter thành aaaa\\', khi đó dấu \\ đã biết thành string 
 
+![image](https://github.com/user-attachments/assets/04e5a1c9-aa1f-4f4d-8cb4-ebb2f2db83df)
 
+Đoạn thừa ở sau thì dùng comment để cho nó biến mất :
 
+![image](https://github.com/user-attachments/assets/11512a32-8927-48e7-b8da-df9cb8058615)
 
+Để trong cái này cho dễ nhìn chứ ở kia không nhìn được 
 
+![image](https://github.com/user-attachments/assets/d18c39a8-ec51-4375-ba42-cb34613b8b6e)
 
+![image](https://github.com/user-attachments/assets/4f5b3724-0164-4d5b-ac1b-ccb9abf24a00)
 
+![image](https://github.com/user-attachments/assets/c3d2e9b5-ffc7-4791-a986-1751df73a5da)
 
+`aaaa\';alert(1)//` 
 
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
