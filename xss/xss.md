@@ -445,13 +445,24 @@ Quên mất dấu cách, bỏ dấu cách đi:
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/792449e2-e10e-4c26-8a0d-7000a89c598d)
 
+![image](https://github.com/user-attachments/assets/47b9164b-2d92-4ad5-a0fb-6d6549b4eb9d)
 
+Khi tôi nhập aa'aaa thì đã được thêm dấu \ để ngăn dấu ' và dấu \
 
+![image](https://github.com/user-attachments/assets/170f9b79-9436-4594-9f37-8880c60a5161)
 
+Tự nhiên tôi thắc mắc sao nó không ngăn cả dấu <> các thứ? 
 
+![image](https://github.com/user-attachments/assets/52035131-aa71-44a9-bb23-b36773106938)
 
+![image](https://github.com/user-attachments/assets/be60253b-63ab-43cc-b714-862c11288dcd)
 
+`</script><script>alert(1)</script>`
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
