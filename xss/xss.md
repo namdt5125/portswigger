@@ -493,23 +493,30 @@ Tôi nhập vào aaaa\' trong code sẽ filter thành aaaa\\', khi đó dấu \\
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/9db6d388-7915-4fd8-94fd-5fbc96d91d96)
 
+Sau khi tôi nhập `te"sd'das\dasd<sd>a` thì nó ra cái này:
 
+![image](https://github.com/user-attachments/assets/f6c52be8-f746-4f70-9520-aa19e0aed074)
 
+![image](https://github.com/user-attachments/assets/a93f2145-bd68-4c68-b55d-2e67c15b6752)
 
+Để ý đến cái link điền vào, nó có chứa onclick để khai thác 
 
+![image](https://github.com/user-attachments/assets/0ad50be6-1051-47ee-9f3e-c91b2fc269af)
 
+Tôi thử `javascript:alert(1)` nhưng không được
 
+![image](https://github.com/user-attachments/assets/d70dbbfb-fcd6-41f6-bdf3-babfd20fbcd6)
 
+![image](https://github.com/user-attachments/assets/b51baa7f-1af5-4c30-9168-8ad87f9019d6)
 
+`http://aaaaaaa?&apos;-alert(1)-&apos;`, sau 1 lúc làm, tôi xem hint và nhận ra là sử dụng `&apos;` thay cho dấu ', mặc dù ctrl+u thì nó vẫn hiển thị đã được mã nhưng thực ra thì khác, khi thêm `&apos;-alert(1)-&apos;` vào sau thì link nhìn khá là legit vì đường link này mã hóa dấu ' lại, onclick sẽ hiểu thành đây là link legit và cái `&apos;` tương đương với ', từ đó khi ấn vào, tức là bật cái onclick lên thì sẽ xuất hiện cái alert(1) 
 
+![image](https://github.com/user-attachments/assets/0bdcd6c0-c018-4eb0-8d40-2e2166eaebba)
 
-
-
-
-
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
