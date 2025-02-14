@@ -402,6 +402,93 @@ Payload đây `<svg><animatetransform onbegin=alert(1) attributeName=transform>`
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/4cdcadfd-ad6f-4ff0-a274-1db3a0691794)
+
+Trước tiên phải tìm hiểu xem canonical link tag là gì 
+
+![image](https://github.com/user-attachments/assets/3a793e93-1fc0-48aa-b910-276ba3bce7e1)
+
+Vào thì không thấy chỗ nào để input luôn 
+
+![image](https://github.com/user-attachments/assets/49c40727-eb1c-4e30-8b53-87830021ee7f)
+
+![image](https://github.com/user-attachments/assets/203a21d0-24e2-400d-9a25-55f10c5caaca)
+
+Tôi nghĩ là tôi nên làm đó để chèn được vào đây 
+
+![image](https://github.com/user-attachments/assets/9b7f4898-fdac-44c9-bcc0-6c18dfcc5930)
+
+Khi vào 1 bài post thì nó hiện lên, sau 1 lúc mày mò thì ra: 
+
+![image](https://github.com/user-attachments/assets/b8177e22-7838-4036-8de0-b2599f5da034)
+
+Thêm dấu ' vào là chữ đổi màu ngay 
+
+![image](https://github.com/user-attachments/assets/88f32289-d488-4d6e-98b3-a6cd3d660605)
+
+Nghiên cứu về alt thì tôi tìm được cái này: 
+
+![image](https://github.com/user-attachments/assets/3bf53d52-71d3-4885-b366-314d3103a524)
+
+![image](https://github.com/user-attachments/assets/eeef8eb6-788b-4fd8-a90f-3bfbed8e01f4)
+
+Thêm hành động khi dùng onclick nữa là xong
+
+![image](https://github.com/user-attachments/assets/ef7f26c0-5668-481f-9c50-8d338c83d328)
+
+Quên mất dấu cách, bỏ dấu cách đi: 
+
+![image](https://github.com/user-attachments/assets/aef14f4c-5efc-475e-8e42-bf794f7f4471)
+
+`view-source:https://0aa9009e04b21b7d805dfd6c00bf0098.web-security-academy.net/?%27accesskey=%27x%27onclick=%27alert(1)`
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
