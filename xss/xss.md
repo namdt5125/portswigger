@@ -627,14 +627,15 @@ function handleResponse() {
     changeReq.open('post', '/my-account/change-email', true);
     changeReq.send('csrf='+token+'&email=test@test.com')
 };
-</script>`<br>
+</script>`<br><br>
 đang tạo XMLHttpRequest để gửi 1 request HTTP với method get đến /my-account, sau khi nhận được phản hồi thì nó sẽ chạy hàm handleResponse() để xử lý dữ liệu<br>
 `var token = this.responseText.match(/name="csrf" value="(\w+)"/)[1];` cái này là kiểm tra xem ở cái nội dung trả về để lấy cái giá trị của csrf<br>
 say khi lấy được thì `var changeReq = new XMLHttpRequest();` sẽ tạo 1 request mới `changeReq.open('post', '/my-account/change-email', true);` nhảy vào `/my-account/change-email` với method post, `changeReq.send('csrf='+token+'&email=test@test.com')` gửi kèm token đi theo và cái email để thay đổi email
 
 ![image](https://github.com/user-attachments/assets/f1e494e6-43fc-4fd3-baba-4b2512124bc4)
 
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
