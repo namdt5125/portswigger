@@ -639,14 +639,3 @@ say khi lấy được thì `var changeReq = new XMLHttpRequest();` sẽ tạo 1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
