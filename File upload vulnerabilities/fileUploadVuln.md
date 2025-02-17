@@ -85,4 +85,26 @@ Do tên đề và tôi đã làm qua mấy bài path traversal nên tôi tò mò
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/ad3c734b-2457-4282-97f7-f48555ee1533)
+
+![image](https://github.com/user-attachments/assets/e87b45a7-337d-4940-9e64-a1199f09732e)
+
+Sau khi chuyển qua nhìn đây tôi biết là nó kiểm tra nội dung file 
+
+![image](https://github.com/user-attachments/assets/e4c1fe39-8012-4bc2-85f6-23470ec3e830)
+
+Tôi để sang gif cho dễ dùng 
+
+![image](https://github.com/user-attachments/assets/38b74abe-c09c-42cb-acbf-ac7c7cd6b76d)
+
+Do bài này hồi xưa tôi chưa làm nên giờ tôi hoàn thiện, thay nội dung file thành `<?php system($_GET['test']); ?>` 
+
+![image](https://github.com/user-attachments/assets/24758379-9344-4977-9f6b-eff055ef7537)
+
+![image](https://github.com/user-attachments/assets/875d5381-8297-41fe-ad42-4c328e787618)
+
+![image](https://github.com/user-attachments/assets/da6e6ea7-789e-4007-a73e-b96f3433cf0b)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
