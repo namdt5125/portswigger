@@ -108,3 +108,30 @@ Do bài này hồi xưa tôi chưa làm nên giờ tôi hoàn thiện, thay nộ
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/55fc2fbd-46ba-48de-8e80-ecd09ce53848)
+
+![image](https://github.com/user-attachments/assets/c3bf0bb9-d092-47f3-9a06-5280dd5d0b54)
+
+![image](https://github.com/user-attachments/assets/3e8650de-81fc-4602-9c1c-71e130841cca)
+
+Test qua qua chức năng
+
+![image](https://github.com/user-attachments/assets/03d696ca-26b9-44e3-840f-e6a9b84428a8)
+
+![image](https://github.com/user-attachments/assets/95f9725f-e58c-48cc-884e-fc5e01ee5c48)
+
+Nhìn đoạn code tôi thấy server lưu tạm vào trong `files/avatars/`, sau đó tiến chạy 2 hàm, hàm checkViruses thì code không có tiết lộ rõ, đại khái là check virus, tí nữa sẽ nói tiếp về cái check virus<br>Hàm checkFileType là check mỗi tên của file xem có đuôi là png hay jpg không, nếu không thì return false và ngược lại, sau đó sẽ in ra tên file, ngược lại thì xóa file luôn 
+<br>
+Do cái checkViruses chạy trước, thế nên nó sẽ cần 1 khoảng thời gian để check virus, thời gian có thể vài mili giây nhưng nó đã có sự tồn tại của test.php trong `files/avatars/`, chỉ là bị xóa đi thôi, vậy thì việc của tôi là sau khi upload test.php và đồng thời nhanh chóng truy cập vào đường dẫn `GET /files/avatars/test.php` để đọc nội dung<br>
+Để làm được điều đó thì đưa cái request POST, tức cái request upload test.php lên và cái request `GET /files/avatars/test.php` để đọc vào repeater, add 2 cái đó cùng 1 group, chọn cái gửi cùng lúc(gửi song song, parallel), để tăng tỉ lệ thành công thì duplicate cái `GET /files/avatars/test.php` lên nhiều cái, nó sẽ tăng khả năng đọc file hơn:
+
+![image](https://github.com/user-attachments/assets/0d4ac646-5e2d-46bf-b53c-32a4fa171496)
+
+![image](https://github.com/user-attachments/assets/e6d211d0-d1a5-4d10-87d5-a040ef103a36)
+
+Nếu không được thì ấn lại vài lần hoặc duplicate thêm vài cái để nó ra
+
+![image](https://github.com/user-attachments/assets/f637d753-d539-4828-85e8-8bf813f636bf)
+
+![image](https://github.com/user-attachments/assets/dd90a9de-28cc-4aff-9bab-7b436c0f7820)
+
