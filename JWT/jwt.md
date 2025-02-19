@@ -55,24 +55,38 @@ Và xóa cả đoạn sau nữa, vì đoạn sau được mã hóa RS256, nó l�
 
 ![image](https://github.com/user-attachments/assets/6333c73e-f1c7-419d-a066-a55341c00ab3)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/763b67e4-31ab-4fba-b8d6-db7d37674d9a)
 
+![image](https://github.com/user-attachments/assets/c2f7db58-e423-472d-8a61-42776d0925e7)
 
+Bài bảo dùng hashcat nên tôi dùng hashcat `hashcat.exe -a 0 -m 16500 ../target/target.txt ../target/rockyou.txt`, tôi dùng exe vì nó có gắn cái gpu của tôi vào nên chạy siêu nhanh, cái jwt thì ở trong file target.txt
 
+![image](https://github.com/user-attachments/assets/8b0556e6-dabb-40bd-8989-d8c3fb3e6499)
 
+Nó là `secret1`, giờ đến bước tạo cái jwt mới, trước tiên là encode cái `secret1` thành `c2VjcmV0MQ==`:
 
+![image](https://github.com/user-attachments/assets/1fe4b686-8f74-4310-a22f-49a7148960ee)
 
+Ấn vào new và dán cái base64 vào cái `k` 
 
+![image](https://github.com/user-attachments/assets/ccc82656-3a79-4cac-ae3f-f3b9b60ea924)
 
+Bấm ok
 
+![image](https://github.com/user-attachments/assets/554c76e3-0a0f-450d-a1e3-d9f734054639)
 
+Vậy là có 1 cái key, json web token sửa thành admin
 
+![image](https://github.com/user-attachments/assets/abfe0cc6-0088-43a5-9fac-4be840d4809e)
 
+Và bấm sign, chọn cái key vừa nãy tạo, kí vào 
 
+![image](https://github.com/user-attachments/assets/31745a02-ebc6-4e96-a989-520e25006f9c)
 
-
-
-
+![image](https://github.com/user-attachments/assets/7bb817fe-4726-4fd5-b203-40afd6d0a2c6)
 
 
 
