@@ -88,11 +88,45 @@ Và bấm sign, chọn cái key vừa nãy tạo, kí vào
 
 ![image](https://github.com/user-attachments/assets/7bb817fe-4726-4fd5-b203-40afd6d0a2c6)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/a3dddf76-6f6d-470c-91de-6b04d4979434)
 
+![image](https://github.com/user-attachments/assets/1fe7ecf5-7d11-4f44-bc02-3cde854b3127)
 
+![image](https://github.com/user-attachments/assets/39e1b6a3-6489-4612-9ae7-0ba29673d092)
 
+Đầu tiên thì tôi xem cái jwt và ngồi thử mấy cái cách từ bài cũ thì đều không được, đề bài có bảo là  bypass via jwk header injection:
 
+![image](https://github.com/user-attachments/assets/b44f55e0-b38d-4908-b698-c8a2e6901e21)
+
+![image](https://github.com/user-attachments/assets/201859d3-5965-490f-a352-2c2bff2ca983)
+
+Kết hợp với đề bài thì tôi nhảy sang JWT editor của burp, chọn tạo RSA key mới và tạo 1 cái<br>
+Thông thường, máy chủ sẽ ký JWT bằng một khóa riêng tư (private key), và chỉ máy chủ có khóa này mới có thể tạo JWT hợp lệ và máy chủ sẽ dùng khóa công khai (public key) tương ứng để kiểm tra tính hợp lệ của chữ ký
+
+![image](https://github.com/user-attachments/assets/abe633ab-2944-418e-a8fa-aa5a8a1a02dd)
+
+Quay lại và sửa wiener thành admin
+
+![image](https://github.com/user-attachments/assets/fe8ab4e7-c81b-40ed-8839-8396a14b7ae6)
+
+![image](https://github.com/user-attachments/assets/57beab10-944d-4f1d-845b-269e978765e9)
+
+![image](https://github.com/user-attachments/assets/1d61f943-cca9-464e-8d33-fe00d485a825)
+
+Chọn embedded JWK và ném cái key tôi vừa tạo vào trong, vậy là đã có 1 cái JWT mới, do máy chủ trong bài 
+ không kiểm tra nên nó tin tưởng public key bên trong JWT và dùng nó để xác thực chính JWT đó, thay vì sử dụng public key thực sự của máy chủ
+
+![image](https://github.com/user-attachments/assets/154c1715-165e-4fbb-892b-2f2ce1ec277f)
+
+![image](https://github.com/user-attachments/assets/8182c85c-d94f-4631-a2e9-4a396e3c4263)
+
+Cuối cùng vẫn là do bên máy chủ tin tưởng JWT chứa public key mà không xác minh nguồn gốc của nó
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
