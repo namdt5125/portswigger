@@ -128,23 +128,39 @@ Cuối cùng vẫn là do bên máy chủ tin tưởng JWT chứa public key mà
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/7cf19d7c-b4af-4cbf-ae57-7aece08cd40d)
 
+![image](https://github.com/user-attachments/assets/61092b59-ad95-4fd7-b603-d99b1f404b60)
 
+Như mấy bài trước nhưng mà không có được, đề bài có nhắc đến jku. Trong JWT, jku (JWK Set URL) là một thuộc tính tùy chọn trong phần header của token. Nó chứa một URL trỏ đến một tập hợp các JWK, giúp bên xác thực lấy khóa công khai để kiểm tra chữ ký của JWT<br>
+Và trong bài này nó không hề kiểm tra cái url nên có thể dùng exploit server để giả mạo 
 
+![image](https://github.com/user-attachments/assets/394e5b53-fcd9-4e82-be67-0fe05aabb720)
 
+Truy cập vào exploit server để lưu trữ khóa công khai trên exploit server sau khi tạo 1 cái RSA mới
 
+![image](https://github.com/user-attachments/assets/b2a62705-ee1f-4e48-8595-6125d295f06f)
 
+Đi copy và paste vào body trong exploit server
 
+![image](https://github.com/user-attachments/assets/f89d9d48-0aeb-4bba-9f8e-415092c6c6b4)
 
+![image](https://github.com/user-attachments/assets/fff9fb4c-b422-4409-adae-616919824682)
 
+Nhớ đổi `Content-Type: application/json;`, sau đó đổi kid sang kid mà đã tạo(chuẩn bị sử dụng nó trong JWT giả mạo, bên máy chủ dùng kid để tra khóa công khai tương ứng trong danh sách JWK Set của nó để xác thực chữ ký), thêm jku vào trong json kèm với đường dẫn của exploit server 
 
+![image](https://github.com/user-attachments/assets/228f0768-3dd2-4a7a-a855-0a0d5a70eaa6)
 
+Chọn store, quay lại burp và ấn vào sign. Sau đó, khi JWT sử dụng khóa này, máy chủ sẽ xác thực JWT bằng khóa giả thay vì khóa thực sự của hệ thống
 
+![image](https://github.com/user-attachments/assets/3a43206c-8c26-4fc5-9b06-13997355a3b8)
 
+![image](https://github.com/user-attachments/assets/7e5c4e99-4274-4fbd-a818-18d452c8b27b)
 
+![image](https://github.com/user-attachments/assets/521ac9c3-ca6e-49da-b45d-1a10c5e8dee6)
 
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
