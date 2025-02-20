@@ -162,14 +162,32 @@ Chọn store, quay lại burp và ấn vào sign. Sau đó, khi JWT sử dụng 
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/0a40a1f8-d9b0-4f36-962f-a91c63d89dec)
 
+![image](https://github.com/user-attachments/assets/45b9c727-ac4a-41ee-9ec5-44795716276e)
 
+Theo đề bài thì máy chủ dùng kid để xác định khóa cần dùng xác thực JWT, ý tưởng là sẽ để kid là khóa rỗng(NULL), tôi vào JWT editor để tạo 1 symmetric key mới
 
+![image](https://github.com/user-attachments/assets/a61aabe5-3fe3-4b78-8bfe-ca3927437d70)
 
+Đổi giá trị k thành `AA==`, tức là NULL encode sang base64, trong một khóa JWK đối xứng (symmetric key), k chính là khóa bí mật để ký và xác minh JWT, việc đổi sang NULL để tí nữa phù hợp với cái `/dev/null`
 
+![image](https://github.com/user-attachments/assets/89ae528e-3447-4aa3-b212-93a3b7718b3d)
 
+Sửa kid thành `../../../../../../../../../dev/null`, buộc máy chủ đọc `/dev/null` là khóa và sửa qua qua thành admin. việc sử dụng `/dev/null` trong kid làm JWT có thể xác thực mà không cần khóa thật
 
+![image](https://github.com/user-attachments/assets/d208f7d1-db25-4686-8d9a-a3ccc3eba1a9)
 
+Và bấm sign
+
+![image](https://github.com/user-attachments/assets/a14a2516-602d-4afb-bc9f-ed1c4a2b04b9)
+
+![image](https://github.com/user-attachments/assets/382c750c-b37f-4d36-a4cc-e99d69412b53)
+
+Nói chung thì kid là xác định khóa bí mật và trỏ đến `/dev/null` để bypass xác thực, trong khi đó k thì là chứa khóa bí mật để xử lý JWT, đặt k = `AA==` để hợp lệ với cái `/dev/null` kia 
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
