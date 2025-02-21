@@ -189,13 +189,40 @@ Nói chung thì kid là xác định khóa bí mật và trỏ đến `/dev/null
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/8ffb125a-dab6-4221-82e1-a697aa49314b)
 
+![image](https://github.com/user-attachments/assets/1a6c44c2-4c76-460d-9046-4641c8dbdc2c)
 
+![image](https://github.com/user-attachments/assets/59cb7ca1-e4f5-4558-b00d-6d3cead61f86)
 
+Theo lý thuyết thì tôi thử truy cập vào 2 cái dir này(vì hint bảo có cái public ở dạng X.509 PEM(PEM (Privacy-Enhanced Mail) là một định dạng tiêu chuẩn để lưu trữ và truyền tải khóa mật mã, chứng chỉ số, hoặc dữ liệu nhạy cảm bằng cách sử dụng Base64 để mã hóa dữ liệu nhị phân)) và tìm được, bước này nhằm lấy khóa công khai của máy chủ để lợi dụng trong phần sau:
 
+![image](https://github.com/user-attachments/assets/7bb2d54e-a2d1-4d3a-ba23-d56287fc326c)
 
+Tôi tạo 1 cái RSA mới và paste cái vừa copy ở jwks.json vào:
 
+![image](https://github.com/user-attachments/assets/d54e34c0-7279-4b6f-be46-89ebb1a9ce03)
 
+Do đề bảo nó là X.509 PEM nên copy ở dạng PEM và đem đi encode base64 
+
+![image](https://github.com/user-attachments/assets/ee363de3-8257-4bba-911a-abe04b81b4e7)
+
+![image](https://github.com/user-attachments/assets/d9853994-c9a0-4b8b-a21a-cc96b2b75809)
+
+Tôi tạo 1 cái Symmetric Key mới và paste cái nội dung vừa copy vào k
+
+![image](https://github.com/user-attachments/assets/732365ba-c6cc-46b6-8555-2e19b942986d)
+
+Đổi sub thành admin và alg thành HS256 do khi chuyển thuật toán ký từ RS256 (bất đối xứng) sang HS256 (đối xứng), máy chủ sẽ dùng cùng một khóa để ký và kiểm tra chữ ký, việc đổi khóa công khai của máy chủ thành một khóa đối xứng để ký JWT, khiến máy chủ tin rằng chữ ký là hợp lệ
+
+![image](https://github.com/user-attachments/assets/19bd87a3-0d4d-4be1-8055-20f4471b904e)
+
+![image](https://github.com/user-attachments/assets/faab06ed-13d9-4801-a405-ffe02214b078)
+
+Nói chung là lỗi ở cái RS256 và HS256, tôi có thể chuyển từ cái này sang cái kia và có thể dùng được cái mã khóa công khai nằm ở jwks.json để thay cho cái khóa bí mật
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
