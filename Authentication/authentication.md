@@ -108,6 +108,47 @@ Spam cái mật khẩu dài dài ra bởi vì khi đưa vào server, nó sẽ b�
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/f74210f3-dda7-4129-b549-540d2b72a0e8)
+
+Sau khi brute thì nó như này đây:
+
+![image](https://github.com/user-attachments/assets/ea7dbec1-b382-49a4-b9a8-a16c830b395b)
+
+Sau 3 lần sai mật khẩu là nó như thế, tôi làm hẳn cái payload cách 1 phút gửi 1 lần:
+
+![image](https://github.com/user-attachments/assets/4a30909c-de5d-4026-b888-ed92e68ee2bc)
+
+Sau khi ngồi đợi, tôi tính qua qua có khoảng 100 cái password, tức là phải đợi 100p, tôi nghĩ là tôi nên tìm cách khác thay vì bỏ gần 2 tiếng đợi<br>
+
+Sau 1 lúc nghịch thử thì tôi nhận ra quy luật, gửi sai 2 lần và lần cuối đúng thì nó được reset, tôi làm lại payload để cho nó tự chạy
+
+![image](https://github.com/user-attachments/assets/9192a97e-1bf5-4381-83f4-edfe0f68c5af)
+
+![image](https://github.com/user-attachments/assets/112d3726-32be-45e7-b841-024c352e433f)
+
+![image](https://github.com/user-attachments/assets/59d3699a-c7db-4de7-92b5-aee90715cc5d)
+
+Tôi chỉnh thành so le, 2 lần carlos và 1 lần wiener, cứ như vậy và để nhanh hơn thì tôi dùng python xếp cho dễ dùng:
+
+![image](https://github.com/user-attachments/assets/5ce868f3-74ce-463f-a74c-d06eaa097857)
+
+Và xong:
+
+![image](https://github.com/user-attachments/assets/7c0fb508-5210-4e14-a7fc-6800dcfc6d79)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
