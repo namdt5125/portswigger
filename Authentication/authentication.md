@@ -139,10 +139,88 @@ Và xong:
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/2c7a7ddc-545b-4e67-8a3f-c9815ff0dfc7)
 
+Vào trang web login bừa, bắt request ném vào intruder và dùng Cluster bomb attack chạy thử thôi:
 
+![image](https://github.com/user-attachments/assets/eb41556e-534c-408e-a3e4-ac56ec7e15cd)
 
+Sau 1 lúc thì có cái này:
 
+![image](https://github.com/user-attachments/assets/1d0504ff-4779-4e66-8195-44f2dc620d39)
+
+Tôi check kĩ thì thấy có 1 cái khác hẳn là nó không hiện incorrect gì cả, tôi thử login thì được 
+
+![image](https://github.com/user-attachments/assets/8662646e-e5ed-4d74-8609-e813febc4ede)
+
+![image](https://github.com/user-attachments/assets/466958c6-4152-4706-b60c-c02a5d52fe12)
+
+![image](https://github.com/user-attachments/assets/a47f7c5f-cb99-45c3-b7f7-13eb3679f15e)
+
+Tôi để ý là khi đối với username valid thì nó sẽ có cái "You have made too many incorrect login attempts. Please try again in 1 minute(s)." còn với invalid thì sẽ chỉ có incorrect thôi
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/f1f029e7-72b6-4e5c-824d-e28a37bf2e6a)
+
+Trước tiên là brute password đã 
+
+![image](https://github.com/user-attachments/assets/89e79f59-4bec-4468-bcf3-96630b6999a5)
+
+Sau khi có pass thì vẫn phải xác thực 2fa 
+
+![image](https://github.com/user-attachments/assets/abef6d54-1431-4439-a3aa-93031dc1ead9)
+
+Tiếp tục brute 2fa
+
+![image](https://github.com/user-attachments/assets/183aa8aa-c3f1-4ae1-b9b8-0c55cb44bfb1)
+
+![image](https://github.com/user-attachments/assets/7dba6315-0629-47a7-966a-b11710a86e66)
+
+![image](https://github.com/user-attachments/assets/05adf35b-d67e-42cc-8387-81e04002eedf)
+
+Theo solution của đề thì đơng giản hơn là khi xác thực wiener thì đổi wiener thành carlos
+
+![image](https://github.com/user-attachments/assets/8c32c519-df23-4881-9d4c-66c96bc2cb80)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/9036bd33-cac4-41bc-8f3c-61bfd7e67a0c)
+
+![image](https://github.com/user-attachments/assets/e2672743-a782-48d0-b7e8-438d24c405d1)
+
+Lần này có cái option chọn stay 
+
+Vào history thì thấy stay-logged-in là encode bằng base64
+
+![image](https://github.com/user-attachments/assets/6e9a6e78-645f-4024-84be-6291bfe3c0af)
+
+![image](https://github.com/user-attachments/assets/e9296ca4-ac5c-4242-99dc-467a262aa113)
+
+Tôi nghi đấy là hash của password nên vác đi hash thử, nó ra thật, giờ thì brute của carlos thôi 
+
+![image](https://github.com/user-attachments/assets/c6dfde21-19b9-4f1f-bc90-29c1b3b61bd2)
+
+![image](https://github.com/user-attachments/assets/0dcc2c53-4fee-48b8-a3a4-203c87d631ff)
+
+Tệ
+
+![image](https://github.com/user-attachments/assets/59bf583d-e5da-43a3-a7ca-95f09aa5fd30)
+
+Sau 1 lúc thì tôi nhận ra phải xóa cái session kia đi vì khi còn session thì tức là vẫn đang là wiener
+
+![image](https://github.com/user-attachments/assets/d1464d25-31a1-4b46-87bd-fbffe94cb1b0)
+
+![image](https://github.com/user-attachments/assets/7e6af92b-fa66-4519-b5d7-e9328c291de1)
+
+Sau đấy tôi mới nhận ra là burp có hỗ trợ chứ không cần phải code tay để tạo mấy cái hash với encode kia....
+
+![image](https://github.com/user-attachments/assets/738b1cd7-9007-46d3-b4f5-a0dfaab22ca4)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
