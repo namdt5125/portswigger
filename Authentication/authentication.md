@@ -261,6 +261,45 @@ Vậy là password không có trong cái list kia, nếu ban nãy tôi brute th�
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/1233a167-ab93-41ec-969c-533821b2d6d7)
+
+Tôi thử vào forgot password và check thử xem update password nó như nào
+
+![image](https://github.com/user-attachments/assets/a22332bd-7628-450e-960e-0199f5b7e0a1)
+
+![image](https://github.com/user-attachments/assets/c52c79a1-92b0-497a-a50e-c41d77832edf)
+
+Và gửi mail về, trong cái mail thì có cái temp-forgot-password-token 
+
+![image](https://github.com/user-attachments/assets/2690239c-23a2-4e63-b412-ac11ca09370e)
+
+Tôi thêm X-Forwarded-Host vào và chèn link exploit vào, việc thêm tiêu đề X-Forwarded-Host để buộc server tạo liên kết reset mật khẩu trỏ đến exploit, X-Forwarded-Host dùng để cho backend biết host gốc của request khi đi qua proxy hoặc load balancer
+
+![image](https://github.com/user-attachments/assets/c301690c-0e77-4a4a-a114-275a476a31a5)
+
+Vào trong access log của exploit thì thấy cái token 
+
+![image](https://github.com/user-attachments/assets/05dd194c-ec4a-4853-83c5-badf1fe85e34)
+
+Đổi token của request 
+
+![image](https://github.com/user-attachments/assets/c11e872e-2fa8-4346-8c41-c1876a197709)
+
+![image](https://github.com/user-attachments/assets/a014747c-b8df-4426-b171-da61f5f2fe83)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
