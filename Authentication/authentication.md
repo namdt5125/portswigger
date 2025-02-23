@@ -287,18 +287,28 @@ Vào trong access log của exploit thì thấy cái token
 
 ![image](https://github.com/user-attachments/assets/a014747c-b8df-4426-b171-da61f5f2fe83)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/747584c8-33fc-497d-997e-a76ed79da9ce)
 
+Giao diện khi đổi mật khẩu có đòi mật khẩu hiện tại để xác nhận 
 
+![image](https://github.com/user-attachments/assets/1377082f-6bf3-44fb-9277-56f44df55bd8)
 
+![image](https://github.com/user-attachments/assets/770a6643-bced-4462-846e-144ea912af2b)
 
+Tôi nhận ra là nếu tôi nhập sai password hiện tại nhưng cả 2 ô new password trùng thì sẽ redirect về login, còn nhập 2 cái new password khác thì hiện ra thông báo mật khẩu sai chứ không redirect
 
+![image](https://github.com/user-attachments/assets/a7ff9eb4-5a63-40f0-a0ee-2d8069b29ffc)
 
+Trường hợp password hiện tại đúng và 2 ô new password khác thì sẽ hiện thông báo 2 cái không trùng 
 
+![image](https://github.com/user-attachments/assets/9eda8e08-3a5d-49b7-aa79-ae0023cf3101)
 
+Ném vào intruder và xem cái nào hiện thông báo 2 cái không trùng thì chính là mật khẩu
 
-
-
+![image](https://github.com/user-attachments/assets/2045b415-30fc-4adc-9b72-2712ad2a60fa)
 
 
 
