@@ -38,10 +38,44 @@ Dùng payload `{"$regex":"admin.*"}` ở username và `{"$ne":""}` ở password 
 
 ![image](https://github.com/user-attachments/assets/a2239487-8b1c-44b7-84c5-21c2a836d046)
 
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/65576890-4176-4949-9de8-01f0694f63b9)
+
+Để ý cái req lookup này, do nó in ra thông tin nên liên quan đến database
+
+![image](https://github.com/user-attachments/assets/bb0bafcd-fb5e-4ef6-a617-a0d03a468f8b)
+
+Tôi đổi thành `wiener'||1||'` thì ra thông tin admin 
+
+![image](https://github.com/user-attachments/assets/3258c9b9-b8de-4977-8915-9ba705c3b740)
+
+Trong trường hợp cả user và cái kia là 0 thì nó sẽ hiển thị `"message": "Could not find user"`
+
+![image](https://github.com/user-attachments/assets/dea08022-daf9-40d3-a41c-8f87008dceaf)
+
+Ném vào intruder để lấy mật khẩu với payload `abc'+||this.password[0]='a`
+
+![image](https://github.com/user-attachments/assets/9aefeeb8-1588-4c9b-8195-77ff3e60a603)
+
+![image](https://github.com/user-attachments/assets/7cbc78a6-538c-4828-ad50-800ee8381cfa)
+
+Và tôi mò ra mật khẩu dài 8 kí tự 
+
+![image](https://github.com/user-attachments/assets/4f3075f1-60be-4297-8206-2f22cef9b6be)
 
 
+Mật khẩu là `fbvgtrqs`
+<br>
+Ngoài ra cũng có thể dùng && là `administrator' && this.password.length < 30 || 'a'=='b` thì cái này tốt hơn || kia do || lấy user đầu tiên của db và may mắn là admin nó ở đầu
 
+![image](https://github.com/user-attachments/assets/9a566956-89d0-4100-a0ca-5c712f5d043a)
 
+![image](https://github.com/user-attachments/assets/b6501ed7-e73d-41ed-97d0-48a063329b73)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
