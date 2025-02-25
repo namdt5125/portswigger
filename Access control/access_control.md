@@ -72,6 +72,61 @@ Và đã vào được
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/cbbaf760-3308-40bb-ad17-84550505d47e)
+
+Sau khi login thì có cái API 
+
+![image](https://github.com/user-attachments/assets/f88c39a5-a85c-42ce-94d6-7bdd9801966b)
+
+Đổi id thành carlos là ra 
+
+![image](https://github.com/user-attachments/assets/8a9b6de8-c4de-451e-a65e-c9962db15919)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/3ee93db1-ff43-48f8-b5ee-f414786bd367)
+
+Lần này thì id nó nhìn dài dòng hơn 
+
+![image](https://github.com/user-attachments/assets/f175188e-7626-4035-976c-c3c189c717a3)
+
+Để ý trong các bài post thì có bài post của carlos 
+
+![image](https://github.com/user-attachments/assets/e8c07d41-e2eb-43a7-8dae-03496b0f3dd7)
+
+![image](https://github.com/user-attachments/assets/a5d7e1f9-931e-46e5-8c47-09662132d8e7)
+
+Lấy được cái id của carlos 
+
+![image](https://github.com/user-attachments/assets/5aff7dcc-de81-4e7a-b1f3-5aa0a2f02840)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/cd838bc2-3027-4d2a-b065-6c74ea7e2d40)
+
+![image](https://github.com/user-attachments/assets/cfcf39a5-f7ee-4963-9858-0b9bd2e7348f)
+
+Đổi cái id là vào được 
+
+![image](https://github.com/user-attachments/assets/aae8191f-b912-4494-8162-fd161d5b5a19)
+
+Nó chuyển hướng sang login khi đổi id thành carlos cơ mà vẫn xem được api 
+
+![image](https://github.com/user-attachments/assets/b0755ce3-a17a-48b0-8433-6b95bbd3c8eb)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
