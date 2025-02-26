@@ -134,10 +134,19 @@ Dùng cái f12 là ra hết
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/cb0c65be-8856-460c-9f34-0b1c546361a2)
 
+Vào thì thấy live chat nên nghịch thử 
 
+![image](https://github.com/user-attachments/assets/efdcce84-a94a-4f2f-9626-b373ce21f8fb)
 
+Ấn view transcript thì tải mấy file có đánh số .txt về máy và trong đó là thông tin cuộc trò chuyện
 
+![image](https://github.com/user-attachments/assets/71ae867b-baf5-4432-825d-d9d43aa5549b)
+
+Tôi tò mò đổi thử thành mấy số linh tinh khác, đến số 1 thì có cuộc trò chuyện có chứa mật khẩu 
+
+![image](https://github.com/user-attachments/assets/0d98dfa6-74b9-46d6-90d4-cb5101f6f5d5)
 
 
 
