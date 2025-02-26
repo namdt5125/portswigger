@@ -116,6 +116,38 @@ Nó chuyển hướng sang login khi đổi id thành carlos cơ mà vẫn xem �
 
 ![image](https://github.com/user-attachments/assets/b0755ce3-a17a-48b0-8433-6b95bbd3c8eb)
 
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/012e8f69-c6ce-40d7-a607-16e4d96ddb56)
+
+Đăng nhập vào thì thấy quả mật khẩu bị che trước mặt
+
+![image](https://github.com/user-attachments/assets/22d7d0e8-aab5-41dd-b63c-7dd913ed47f3)
+
+Dùng cái f12 là ra hết 
+
+![image](https://github.com/user-attachments/assets/99d3c945-4120-4ee4-8c4c-a7c966d5deaa)
+
+![image](https://github.com/user-attachments/assets/5d07dc35-d132-4e00-89c7-61e3e620ef32)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
