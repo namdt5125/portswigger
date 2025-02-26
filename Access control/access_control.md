@@ -148,29 +148,91 @@ Tôi tò mò đổi thử thành mấy số linh tinh khác, đến số 1 thì 
 
 ![image](https://github.com/user-attachments/assets/0d98dfa6-74b9-46d6-90d4-cb5101f6f5d5)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/17ee5ebf-86d7-4e08-9d5d-97fc465bc79b)
 
+Cái này không cho tôi truy cập vào /admin
 
+![image](https://github.com/user-attachments/assets/045e8c80-0dcc-4493-a05e-322ed658a22b)
 
+Sau khi tôi thêm cái `X-Original-Url: /admin` ở req / thì được:
 
+![image](https://github.com/user-attachments/assets/735a469e-a074-4abc-aa9b-b3e6cbf06d38)
 
+X-Original-URL là một HTTP header mà một số web framework hoặc proxy sử dụng để xác định đường dẫn gốc của yêu cầu trước khi nó bị thay đổi bởi proxy hoặc middleware. Nó thường xuất hiện trong các hệ thống có proxy ngược (reverse proxy) hoặc cân bằng tải, xóa carlos:
 
+![image](https://github.com/user-attachments/assets/46d0574a-e3f0-406a-8166-ed74d9f7506b)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/4d71d737-4db7-4139-af84-4b6d8eb895cd)
 
+Tôi vào và thử nâng quyền carlos lên admin 
 
+![image](https://github.com/user-attachments/assets/016822e8-fbce-403a-99e9-1db4a35e817f)
 
+Cái req đi qua admin-roles, wiener đang không phải admin, tôi thử dùng req đó với wiener:
 
+![image](https://github.com/user-attachments/assets/2f684a62-5cd6-4b06-9d90-6de346b406e0)
 
+Thiếu tham số, nhìn qua req này thì thấy nó là GET 
 
+![image](https://github.com/user-attachments/assets/fff373cc-6299-460a-97c2-216538ed9623)
 
+Tôi thêm tham số get vào thì vẫn không được 
 
+![image](https://github.com/user-attachments/assets/66645661-fd16-40f2-a2c3-49c1f8c39d0e)
 
+Quay lại chỗ admin thì ngạc nhiên thấy carlos đang làm admin 
 
+![image](https://github.com/user-attachments/assets/343161ca-b50c-4c74-95e2-2d8abb5a3943)
 
+Tôi thử với wiener và xong
 
+![image](https://github.com/user-attachments/assets/40abb2c9-c5b4-407e-9c49-f97f123644db)
 
+![image](https://github.com/user-attachments/assets/d46033e4-f6b0-465d-9e27-3c173d3b2c12)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/3afcf901-101b-4189-a67e-00e8c6e24650)
 
+Lần này có hẳn "Are you sure?" để chắc chắn
+
+![image](https://github.com/user-attachments/assets/f7b7315a-6aa9-4827-be6a-4f20caf65cce)
+
+Cái request như này
+
+![image](https://github.com/user-attachments/assets/e2635a9f-3356-43ea-bb19-62495edd809d)
+
+Lần này có vẻ không vào được 
+
+![image](https://github.com/user-attachments/assets/e5850690-de1a-4446-8bcf-b3fed453782a)
+
+Tôi mở tạm cái ẩn danh, đăng nhập với wiener và đổi sang POST, thêm mấy cái tham số vào, chạy thử và carlos lên admin thật
+
+![image](https://github.com/user-attachments/assets/0f4d685a-67f2-49ca-b29f-e48008a836c5)
+
+Đổi tên và gửi req, xong
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/615167f8-377c-4848-877e-2ca4e901fcfb)
+
+Ở bên admin là dùng GET để upgrade lên admin, tôi đăng nhập với wiener và làm giống hệt thì không có được 
+
+![image](https://github.com/user-attachments/assets/f5790b28-0cc1-4b66-9e12-aa891d2c30de)
+
+Do tên đề bài có chữ Referer và kết hợp nhìn thấy bên admin cũng có `Referer: https://0acf00ba047b4bb28610e93f00fd0094.web-security-academy.net/admin` nên tôi copy ném vào:
+
+![image](https://github.com/user-attachments/assets/f04e2438-12f3-4228-b7b7-985680b95e42)
+
+Xong
+
+![image](https://github.com/user-attachments/assets/ba4ca56f-0821-42aa-a2bd-48c29d37ce20)
 
