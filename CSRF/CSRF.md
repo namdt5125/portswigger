@@ -8,7 +8,7 @@ Tạo 1 cái CSRF PoC:
 
 ![image](https://github.com/user-attachments/assets/5e366c9f-17c4-42fe-8868-1d9d165a931e)
 
-
+Đưa vào trong exploit là xong
 
 
 
