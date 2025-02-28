@@ -121,6 +121,9 @@ Và đây là payload, chức năng payload này khá giống bài trước:
 
 ![image](https://github.com/user-attachments/assets/8b4dddb5-e402-4616-a96c-6d5e65114842)
 
+<h1>---------------------------------------------------------</h1>
+<br>
+
 
 
 
