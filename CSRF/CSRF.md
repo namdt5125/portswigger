@@ -68,22 +68,33 @@ Tạo cái CSRF PoC rồi đổi token và email là xong
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/a2777793-6922-41f1-bd65-868b7ff7c599)
 
+Lần này trong cookie có hẳn cái csrfkey 
 
+![image](https://github.com/user-attachments/assets/bfcabbde-b26b-42f0-ba63-afb4e90bfdea)
 
+Tôi thử đổi riêng các token csrf hoặc csrfkey giữa 2 tài khoản thì không có được, xóa cũng không được, nhưng nếu đổi cả token lẫn csrfkey thì lại được:
 
+![image](https://github.com/user-attachments/assets/517178eb-fac4-432a-a854-42a37332b8dd)
 
+Vấn đề là làm sao để có thể lấy được token của nạn nhân hoặc là đưa cái token của mình vào? Để ý cái tính năng search của bài, khi search thì cái req có chứa cái cookie:
 
+![image](https://github.com/user-attachments/assets/690604b0-eb66-4faa-a967-92d23c051aee)
 
+![image](https://github.com/user-attachments/assets/64f572fc-727b-4c16-abe6-ed64552d54ca)
 
+![image](https://github.com/user-attachments/assets/df2f8dbe-7682-4898-a254-5e5fd1ab3c6d)
 
+Với cái này thì dùng loại inject vào trong cái header với payload `?search=lmao%3b%0d%0aSet-Cookie:%20csrfKey=TDJV7g1KMSCZg0S1ZQodg0quVFdxzfiL`, trong đây có đưa con trỏ về đầu bằng %0d và xuống dòng với %0a:
 
+![image](https://github.com/user-attachments/assets/69444495-b94d-4f4a-b8b6-e7274a97ba28)
 
+Tạo cái csrf PoC và sửa thành như này:
 
+![image](https://github.com/user-attachments/assets/f473df5f-c9bb-477f-b2a1-46137f84e761)
 
-
-
-
+![image](https://github.com/user-attachments/assets/ed3ab3a7-c26e-45b1-a9cd-8fac9ad6ff24)
 
 
 
