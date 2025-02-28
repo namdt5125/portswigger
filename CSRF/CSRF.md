@@ -96,6 +96,22 @@ Tạo cái csrf PoC và sửa thành như này:
 
 ![image](https://github.com/user-attachments/assets/ed3ab3a7-c26e-45b1-a9cd-8fac9ad6ff24)
 
+Sau khi thử thì không thấy nó solve, tôi sửa payload là thành như này, giữ lại `Secure; HttpOnly` và thêm `SameSite=None;` là một thuộc tính trong cookie giúp kiểm soát cách trình duyệt gửi cookie khi có yêu cầu từ trang web khác
+
+![image](https://github.com/user-attachments/assets/6f2f1e29-5594-43e4-9f9a-dc123201cc01)
+
+![image](https://github.com/user-attachments/assets/b088b0a4-3898-40c1-a632-23d3ccd20cbd)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
 
 
 
