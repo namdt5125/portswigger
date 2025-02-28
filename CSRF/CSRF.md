@@ -51,13 +51,22 @@ Vậy là chỉ cần xóa token và đưa vào là xong
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/f724bab4-0487-456e-bb3d-6b799233dc41)
 
+Sau 1 lúc thử, mỗi lần đổi email là đổi token csrf, không dùng lại được, không xóa đi được
 
+![image](https://github.com/user-attachments/assets/ba5c9cf7-6f2e-4ce8-ad74-0548b05b9d99)
 
+Bật f12 lên thì thấy có giá trị của token csrf, nếu đổi email là sẽ dùng cái token đấy, thử tiếp thì tôi thấy cái token không phân biệt các user khác nhau:
 
+![image](https://github.com/user-attachments/assets/4ccd32c2-1464-4c39-bf66-6185f86f5c78)
 
+Tạo cái CSRF PoC rồi đổi token và email là xong
 
+![image](https://github.com/user-attachments/assets/f79c4b21-6d71-4321-b8c1-195b2c8c217a)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
