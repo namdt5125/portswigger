@@ -15,6 +15,62 @@ Tạo 1 cái CSRF PoC:
 
 ![image](https://github.com/user-attachments/assets/bc064f7a-63e0-4a21-b6e3-b6a30662835d)
 
+Đây là req của thay đổi email và có cả cái token csrf:
+
+![image](https://github.com/user-attachments/assets/73044eac-8b76-4f79-af3f-5a6a992cde8a)
+
+Token sai là không cho đổi mail:
+
+![image](https://github.com/user-attachments/assets/0b747f5d-6779-47fb-b7e6-ee8748f12f55)
+
+Cơ mà đề bài có nhắc đến thể loại req nên tôi thử chuyển sang GET, ném cái tham số email lên trên và gửi được req:
+
+![image](https://github.com/user-attachments/assets/9e72c5e2-b7c0-4fe0-9549-745b72f617d2)
+
+![image](https://github.com/user-attachments/assets/5b83260c-f62a-4063-a926-a40c3d231ff8)
+
+Ném vào exploit là xong
+
+![image](https://github.com/user-attachments/assets/6c3a014a-f132-4339-a23c-f906256a297a)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/61e688d4-2546-4dfe-b7cb-2c3e56e92847)
+
+Đây là req để đổi email:
+
+![image](https://github.com/user-attachments/assets/46d48cbb-1d30-4b12-bf83-fe8e152dd2e0)
+
+Tôi thử xóa hẳn cái token csrf đi và vẫn đổi được mail:
+
+![image](https://github.com/user-attachments/assets/c25009bc-ae65-4e2e-abbc-7042cba93412)
+
+Vậy là chỉ cần xóa token và đưa vào là xong
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
