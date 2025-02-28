@@ -86,7 +86,7 @@ Vấn đề là làm sao để có thể lấy được token của nạn nhân 
 
 ![image](https://github.com/user-attachments/assets/df2f8dbe-7682-4898-a254-5e5fd1ab3c6d)
 
-Với cái này thì dùng loại inject vào trong cái header với payload `?search=lmao%3b%0d%0aSet-Cookie:%20csrfKey=TDJV7g1KMSCZg0S1ZQodg0quVFdxzfiL`, trong đây có đưa con trỏ về đầu bằng %0d và xuống dòng với %0a:
+Với cái này thì dùng loại inject vào trong cái header với payload `?search=lmao%3b%0d%0aSet-Cookie:%20csrfKey=TDJV7g1KMSCZg0S1ZQodg0quVFdxzfiL`, trong đây có đưa con trỏ về đầu bằng %0d và xuống dòng với %0a, cái này để set cái csrfkey cookie của nạn nhân thành giống với cái của wiener:
 
 ![image](https://github.com/user-attachments/assets/69444495-b94d-4f4a-b8b6-e7274a97ba28)
 
@@ -96,21 +96,30 @@ Tạo cái csrf PoC và sửa thành như này:
 
 ![image](https://github.com/user-attachments/assets/ed3ab3a7-c26e-45b1-a9cd-8fac9ad6ff24)
 
-Sau khi thử thì không thấy nó solve, tôi sửa payload là thành như này, giữ lại `Secure; HttpOnly` và thêm `SameSite=None;` là một thuộc tính trong cookie giúp kiểm soát cách trình duyệt gửi cookie khi có yêu cầu từ trang web khác
+Sau khi thử thì không thấy nó solve, tôi sửa payload là thành như này, giữ lại `Secure; HttpOnly` và thêm `SameSite=None` là một thuộc tính trong cookie giúp kiểm soát cách trình duyệt gửi cookie khi có yêu cầu từ trang web khác
 
 ![image](https://github.com/user-attachments/assets/6f2f1e29-5594-43e4-9f9a-dc123201cc01)
 
 ![image](https://github.com/user-attachments/assets/b088b0a4-3898-40c1-a632-23d3ccd20cbd)
 
+Đại khái thì payload này sẽ đổi cookie của nạn nhân, cụ thể là csrfkey và token csrf, sau đó tự động đổi email
+
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/0b746cb3-cdbc-4e4c-8939-93fa6b281ed2)
 
+Lần này thì token csrf lặp lại cả ở cookie:
 
+![image](https://github.com/user-attachments/assets/ee4270bc-0be7-4d18-be07-454a5b060440)
 
+Tôi dùng tính năng search và inject payload `search=lmao%3b+Secure%3b+HttpOnly%0d%0aSet-Cookie:csrf=8XBVDtGcrz1QayzohITrrK3XldjZXM0x%3b+SameSite=None` vào trong header:
 
+![image](https://github.com/user-attachments/assets/a7181868-1e8f-4aca-8265-0ee1b96c1986)
 
+Và đây là payload, chức năng payload này khá giống bài trước:
 
+![image](https://github.com/user-attachments/assets/8b4dddb5-e402-4616-a96c-6d5e65114842)
 
 
 
