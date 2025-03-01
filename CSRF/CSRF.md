@@ -124,20 +124,32 @@ Và đây là payload, chức năng payload này khá giống bài trước:
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/807776ad-8e2e-4c6d-8cdb-dfa8f8184e1f)
 
+Đây là req đổi email thông qua tài khoản wiener:
 
+![image](https://github.com/user-attachments/assets/d0a3e177-cd84-4b86-b31e-bd7c8d55dff3)
 
+Thử dùng csrf PoC mà không được:
 
+![image](https://github.com/user-attachments/assets/0d659fff-b852-49be-b9ae-00a626d76b43)
 
+Tôi thử đổi method sang GET nhưng vẫn không được:
 
+![image](https://github.com/user-attachments/assets/ce37f2d9-fbb3-4661-b6f3-7b367379b4d8)
 
+Tôi tìm được cái `_method` để ghi đè method: 
 
+![image](https://github.com/user-attachments/assets/aab1e973-08db-4fe7-bc43-84d7f3df7fd8)
 
+Tôi đổi method thành GET, lấy csrf PoC và thêm `<input type="hidden" name="_method" value="POST" />`:
 
+![image](https://github.com/user-attachments/assets/f25ff017-7e17-405c-aacf-77177f9d105a)
 
+![image](https://github.com/user-attachments/assets/68698acd-f709-4a7c-aa29-0c1e6499bc6a)
 
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
