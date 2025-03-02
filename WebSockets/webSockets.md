@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2249d955-38cd-4c2b-906b-b48d85762217)
+![image](https://github.com/user-attachments/assets/501f1660-f46c-4ba8-8b64-195e70a5ebaa)![image](https://github.com/user-attachments/assets/2249d955-38cd-4c2b-906b-b48d85762217)
 
 Đây là chức năng livechat của web:
 
@@ -61,17 +61,38 @@ Viết 1 script gửi READY và trả kết quả về burp collaborator:
 
 ![image](https://github.com/user-attachments/assets/bd9a5f54-d8ba-4cac-a57f-32c8430d6755)
 
+Có vẻ collaboratỏ của tôi có vấn đề rồi:
 
+![image](https://github.com/user-attachments/assets/4e445066-f424-4360-a8d5-67285b796f7e)
 
+![image](https://github.com/user-attachments/assets/a18bd17c-a4db-48f2-b2c2-5320acafee16)
 
+Chắc là skip bài này...
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/beee699e-460a-4d28-8658-d35147d7cb2d)
 
+Tôi làm cái payload `<img src=lmao onerror='alert(1)'>` là nó báo Attack detected: Event handler luôn mà:
 
+![image](https://github.com/user-attachments/assets/cfae15e1-f69e-4227-952a-a282efc861ca)
 
+Vào blacklist luôn:
 
+![image](https://github.com/user-attachments/assets/4cb29974-62f9-413f-b164-4c90d17b8594)
 
+Thêm cái `X-Forwarded-For: google.com` để kết nối lại, thêm cái này vào thì mọi req đều có x-forward-for:
 
+![image](https://github.com/user-attachments/assets/4e3f7fb3-410d-4ed4-b725-87bb3eab903f)
+
+Sau 1 lúc test thử thì có vẻ server không cấm các dấu <>' các thứ, chỉ cấm cái từ khóa onerror và alert() thôi:
+
+![image](https://github.com/user-attachments/assets/9b592017-70a6-4b70-851c-eaca63250fb6)
+
+Dùng payload `<img src=1 oNeRrOr=alert``1``>` để bypass, trong có 1 dấu backstick thôi chứ không phải 2 cái:
+
+![image](https://github.com/user-attachments/assets/e36e6f93-829e-42cc-a3e9-69970c0208a8)
 
 
 
