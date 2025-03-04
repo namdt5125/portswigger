@@ -199,6 +199,44 @@ Tôi bị nhầm, do để dấu & trong cái request nên nó tưởng đấy l
 
 ![image](https://github.com/user-attachments/assets/4c84a056-f732-4a2b-80fc-a440771ad473)
 
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/e27f88b4-866b-468e-b2b0-5b45b628b7b8)
+
+Đây là phần livechat:
+
+![image](https://github.com/user-attachments/assets/9aeba0de-2cd1-487e-82a3-ad81ea681092)
+
+Tôi bật intercept lên và nhập payload `<img src=lmao onerror='alert(1)'>` vào, xảy ra xss:
+
+![image](https://github.com/user-attachments/assets/09cca0fd-cb89-4916-b9e2-d236fd7d732e)
+
+![image](https://github.com/user-attachments/assets/5d58e331-face-46da-8f4a-3b250488ddc8)
+
+Để lấy được lịch sử cuộc trò chuyện thì phải cần có cookie và gửi READY, cái mà xác nhận đã kết nối vào:
+
+![image](https://github.com/user-attachments/assets/88e4a4c9-685d-4deb-8593-76d27226c7d6)
+
+Tôi nghĩ tôi sẽ lấy cookie của các user khác:
+
+![image](https://github.com/user-attachments/assets/039ea87c-c5eb-488f-90d6-d8c1c026d035)
+
+Đợi 1 lúc thì không thấy cookie nào cả 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
