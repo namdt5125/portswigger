@@ -122,18 +122,29 @@ Encode url rồi ném vào message thì được:
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/96312d12-471c-40cf-8558-94f640e789cd)
 
+Đăng nhập bằng content-manager:C0nt3ntM4n4g3r và vào các blog post thì có edit template:
 
+![image](https://github.com/user-attachments/assets/1067d492-be88-4eda-9135-7aab77751c37)
 
+Tiếp tục dùng payload kia thì tôi ra được mấy cái 500 
 
+![image](https://github.com/user-attachments/assets/bbd9f8b5-3618-4d99-9e0d-9d354d614eed)
 
+Để ý cái lỗi là nó thuộc django: 
 
+![image](https://github.com/user-attachments/assets/97a8c60d-01d9-402e-a10b-67c7d278accc)
 
+Thử mấy cái payload Django:
 
+![image](https://github.com/user-attachments/assets/9504d16f-2017-4869-8547-14b66348a9d9)
 
+![image](https://github.com/user-attachments/assets/99672052-892a-4146-84c2-26b328ce8f88)
 
+`{{settings.SECRET_KEY}}` là cú pháp của Django Template Language (DTL), được dùng để truy cập biến SECRET_KEY trong tập tin cấu hình settings.py của Django
 
-
+![image](https://github.com/user-attachments/assets/af14d3bb-1473-4578-83a5-cb37cd464ad2)
 
 
 
