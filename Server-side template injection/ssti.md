@@ -95,13 +95,32 @@ Sau 1 lúc tìm payload trong [PayloadsAllTheThings](https://github.com/swisskyr
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/d7975839-9de2-4df6-b66d-501a7ef9b3ec)
 
+Khi ấn view detail cái đầu tiên thì ra Unfortunately this product is out of stock:
 
+![image](https://github.com/user-attachments/assets/bd87d20b-6c0e-43e9-a66c-825bb4823ced)
 
+![image](https://github.com/user-attachments/assets/110714c6-70ba-4d6d-afbc-8df58760baea)
 
+Tôi lấy bừa cái [wordlist](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/ssti.txt) trên mạng để chạy thì có 1 số cái gây ra lỗi:
 
+![image](https://github.com/user-attachments/assets/41323ee5-8333-4011-b6e4-3f24687e2949)
 
+Sau khi xác định được đây là javascript, tôi đi mày mò payload ở trong [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/JavaScript.md) thì có cái này:
 
+![image](https://github.com/user-attachments/assets/88448207-5c0f-4598-873b-56eb25b40ef1)
+
+Encode url rồi ném vào message thì được:
+
+![image](https://github.com/user-attachments/assets/5b526a05-3392-46f7-bc69-f973820ae06f)
+
+Đổi sang rm là được:
+
+![image](https://github.com/user-attachments/assets/f9aefd62-73f9-48c6-a5ee-8bbf45030e56)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
