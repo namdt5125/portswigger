@@ -51,6 +51,37 @@ Dùng postMessage để gửi javascript:print() vào iframe, nó sẽ thực th
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/366586a1-30fd-46e8-b2d2-0e3a989f0dc8)
+
+Sau 1 lúc khám phá thì để ý cái nút back to blog:
+
+![image](https://github.com/user-attachments/assets/ceaa1099-a24d-43b7-aa22-05043f6f580c)
+
+Cái href="#" khi nhấp vào liên kết này, trình duyệt sẽ không điều hướng đến URL khác ngay lập tức mà chỉ thực thi JavaScript trong sự kiện onclick, /url=(https?:\/\/.+)/: là một regex nhằm tìm kiếm một phần của URL có dạng url=https://example.com, .exec(location) thì kiểm tra xem location (đại diện cho URL hiện tại của trang web) có khớp với regex không. Nếu có, nó sẽ trả về một mảng kết quả với phần tử đầu tiên là toàn bộ chuỗi khớp, và phần tử thứ hai là URL thực tế, nếu returnUrl tìm thấy URL hợp lệ, trình duyệt sẽ điều hướng đến returnUrl[1] (tức là trang blog)
+
+![image](https://github.com/user-attachments/assets/da282009-bf62-4a86-8c95-b0e5943a850a)
+
+Để dễ hiểu hơn thì khi tôi thêm `&url=https://google.com` vào, sau đó ấn back to blog thì web sẽ dẫn đến địa chỉ https://google.com
+
+![image](https://github.com/user-attachments/assets/752e4433-c141-4eaf-98c8-cb8c9ff8ab6d)
+
+Req của nó đây:
+
+![image](https://github.com/user-attachments/assets/40b4a377-b248-4c69-9a6f-5beaeca4f391)
+
+Đưa link exploit vào là xong:
+                                                                                            
+![image](https://github.com/user-attachments/assets/40ca71b7-1d76-4e4c-b3e5-b7a955b0d1cd)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
 
 
 
