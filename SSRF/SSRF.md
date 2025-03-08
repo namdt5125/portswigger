@@ -82,16 +82,40 @@ Gửi đi vẫn không được, tôi thử encode lần 2 thì được, có v�
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/a058dc16-1295-47bd-a752-4d3003615dc5)
 
+Vẫn nằm ở stockApi, có vẻ lần này server chỉ để dir và param ở sau, còn domain ở trước, có vẻ khó để làm gì đó:
 
+![image](https://github.com/user-attachments/assets/e3070edc-e364-404c-9562-f6b709dbf7a1)
 
+![image](https://github.com/user-attachments/assets/a0d16fac-ed34-4568-a936-7be394d192a5)
 
+Và dĩ nhiên là tôi không thể cứ thế chèn vào được:
 
+![image](https://github.com/user-attachments/assets/0f7dc5a3-f705-4445-9847-737bf7f61c1e)
 
+Để ý có cái nút next product, nó có 1 cái path=/product?productId=3 là chứa cái sản phẩm tiếp theo và href đến:
 
+![image](https://github.com/user-attachments/assets/d0c135c7-3a2a-4163-bca4-2a4f222d7f93)
 
+![image](https://github.com/user-attachments/assets/691e715e-00d1-432a-89f6-46418a3a88b4)
 
+Nếu đổi sang `https://google.com/` thì dẫn đến google.com luôn:
 
+![image](https://github.com/user-attachments/assets/746ea682-f5b9-45a4-870a-eee53b1127d6)
+
+Thử đổi stockApi thành `/product/nextProduct?currentProductId=2&path=/product?productId=3` thì dẫn đến trang product đấy luôn
+
+![image](https://github.com/user-attachments/assets/30dcdaca-6b3f-4f5a-875d-7cb14ce0754a)
+
+Giờ thì chèn cái localhost vào `/product/nextProduct%3fcurrentProductId%3d2%26path%3dhttp%3a//192.168.0.12%3a8080/admin`:
+
+![image](https://github.com/user-attachments/assets/6cad5aa6-fc65-46b5-956d-f313eb481128)
+
+![image](https://github.com/user-attachments/assets/3ceb3534-5a5a-4bbc-ad17-192cb30e535b)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
