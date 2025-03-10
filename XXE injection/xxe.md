@@ -112,13 +112,28 @@ Thì cái này sẽ mở file /etc/hostname và gán vào param exploit của li
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/9da47469-ce51-4e82-9bdb-0cac0459a7de)
 
+Vẫn như bài lab cũ, vẫn là check stock:
 
+![image](https://github.com/user-attachments/assets/4f343042-1aa6-45f2-98c6-f565f386f6a0)
 
+Lần này thì nhìn có dài dài hơn nhưng vẫn gửi được req đến burp collaborator:
 
+![image](https://github.com/user-attachments/assets/88f6f8e9-94a7-4716-b8c3-2b003dc7c6a0)
 
+![image](https://github.com/user-attachments/assets/e3c30854-2325-4132-a498-ac5cd082eafa)
 
+Đổi từ burp collaborator sang link của server exploit và trong server exploit thì để body là cái này:
 
+![image](https://github.com/user-attachments/assets/c84e4d56-928c-4eac-999f-bb2dbdd8b5e6)
+
+Và cuối cùng gửi req là xong:
+
+![image](https://github.com/user-attachments/assets/471678c0-1cd7-446f-ae0c-84492506231d)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
