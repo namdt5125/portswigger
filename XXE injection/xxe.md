@@ -41,17 +41,28 @@ Xong
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/754be58c-4156-43b5-9d8c-4e6c26ebeb6f)
 
+Đây là req check stock:
 
+![image](https://github.com/user-attachments/assets/27831c9a-8d98-4212-b0b0-ce016e6e3502)
 
+Tôi thử cái payload cũ thì không có được:
 
+![image](https://github.com/user-attachments/assets/763c56ac-10ff-4a1d-b06b-bbff6673efec)
 
+Tôi thử thay bằng cái link burp collaborator vào:
 
+![image](https://github.com/user-attachments/assets/7d700cd7-60c0-4126-a3bd-68c69c17cc46)
 
+![image](https://github.com/user-attachments/assets/04319aa1-4a6b-4fde-b37d-92d3d547b3ee)
 
+Và nó có gửi req tới, xong
 
+![image](https://github.com/user-attachments/assets/538c6c88-7493-4097-9389-4af04c03d7f5)
 
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
