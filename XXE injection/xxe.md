@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/9ac75822-f294-45ca-a3b0-8fa91d1c4b73)![image](https://github.com/user-attachments/assets/fec71b7a-2c45-415e-bc58-6dcd860f9253)
+![image](https://github.com/user-attachments/assets/fec71b7a-2c45-415e-bc58-6dcd860f9253)
 
 Trong web có cái check stock dùng xml:
 
@@ -134,6 +134,38 @@ Và cuối cùng gửi req là xong:
 
 <h1>---------------------------------------------------------</h1>
 <br>
+
+![image](https://github.com/user-attachments/assets/8208ead7-fa4c-494a-a0e7-21c34d149257)
+
+Lần này thì cái check stock không có ở dạng xml
+
+![image](https://github.com/user-attachments/assets/b829cf30-e952-4879-aca6-ffdb0c8d7190)
+
+Thử sửa sang xml mà vẫn không thấy được:
+
+![image](https://github.com/user-attachments/assets/e8220178-44bb-4d32-8811-281aaea9fed2)
+
+Nhưng khi tôi chèn 1 cái entity vào thì nó hiện ra "Entities are not allowed for security reasons", điều này có nghĩa là nó có xml ở cái param đó:
+
+![image](https://github.com/user-attachments/assets/1dda301b-995b-4c35-ad96-14356b409a5d)
+
+Đề có nhắc tới cái XInclude thì XInclude (XML Inclusions) là một cơ chế cho phép nhúng hoặc hợp nhất nội dung từ tài liệu bên ngoài vào trong một tài liệu XML. Nó được định nghĩa bởi W3C và sử dụng namespace, tôi lấy cái payload ở trên [payloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection):
+
+![image](https://github.com/user-attachments/assets/8960ae73-90e4-408d-8b47-d5d3bcfc84f2)
+
+![image](https://github.com/user-attachments/assets/9d361032-8287-43fd-b0c7-bb1cac32a27e)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
 
 
 
