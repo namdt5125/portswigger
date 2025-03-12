@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/b26aa175-7f82-4aed-8255-e68754a46273)![image](https://github.com/user-attachments/assets/61a44a82-60f8-4d7d-bc4d-919e7c05a8d2)
+![image](https://github.com/user-attachments/assets/61a44a82-60f8-4d7d-bc4d-919e7c05a8d2)
 
 Đây là giao diện của trang web:
 
