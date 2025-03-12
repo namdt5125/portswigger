@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/61a44a82-60f8-4d7d-bc4d-919e7c05a8d2)
+![image](https://github.com/user-attachments/assets/b26aa175-7f82-4aed-8255-e68754a46273)![image](https://github.com/user-attachments/assets/61a44a82-60f8-4d7d-bc4d-919e7c05a8d2)
 
 Đây là giao diện của trang web:
 
@@ -60,6 +60,56 @@ Vào trong repeater và sửa thành getUser, id=1:
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/def61e5d-89e4-4911-8a42-9d984297a9dc)
+
+Lần này thì nó để ở dạng param trong body:
+
+![image](https://github.com/user-attachments/assets/6c6d3edf-4bbe-4c1a-8f0a-17ad097d814c)
+
+Tôi thử vào cái api thì hiện ra cái này:
+
+![image](https://github.com/user-attachments/assets/f6a4607c-ea28-48eb-9f22-438ac7816e81)
+
+Dựa vào kiến thức sgk mà PortSwigger có bảo thì tôi dùng `api/?query=query%7B__schema%0A%7BqueryType%7Bname%7D%7D%7D`:
+
+![image](https://github.com/user-attachments/assets/e3ac6570-1a22-4f8d-b403-d466c7d8ae16)
+
+![image](https://github.com/user-attachments/assets/84605c3b-7053-41da-a8be-f8b83775bd2b)
+
+Tôi thử IntrospectionQuery nhưng không được:
+
+![image](https://github.com/user-attachments/assets/d88f617b-d858-485f-a29c-fdaf000215d2)
+
+![image](https://github.com/user-attachments/assets/296054bf-ca11-430c-9fc9-af8228a1e106)
+
+Nhưng khi xuống dòng ở __schema thì có kết quả:
+
+![image](https://github.com/user-attachments/assets/0774856f-7f0d-4337-82a9-bbf6eb309bf7)
+
+Copy mang ra cái [GraphQL Visualizer](https://nathanrandal.com/graphql-visualizer/) thì ra cái getUser và không thấy có password:
+
+![image](https://github.com/user-attachments/assets/86cd7b44-fb72-4ed0-8ccb-a3fd405144af)
+
+![image](https://github.com/user-attachments/assets/5bd5e43c-a057-4483-aed9-87356fd5e17a)
+
+Vào cái response, chọn save 
+
+![image](https://github.com/user-attachments/assets/f9da32a2-06ae-440b-8685-2d3d5dac3018)
+
+Lúc đó target sáng lên, vào target thì có 2 cái req là getUser và DeleteOrganizationUserInput, đưa cái DeleteOrganizationUserInput vào repeater và send:
+
+![image](https://github.com/user-attachments/assets/46567170-6ef9-4137-b875-41b657fd3c2c)
+
+Cái này là xóa dựa trên id, tôi dùng cái getUser để tìm carlos thì là id 3
+
+![image](https://github.com/user-attachments/assets/f97af478-700a-451a-aa95-58525330c70e)
+
+Vào cái xóa và đổi id thành 3 là xong
+
+![image](https://github.com/user-attachments/assets/ce0f5fee-cc9e-4f26-a3f4-330c47f81a99)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
