@@ -37,6 +37,32 @@ Nếu để ý mấy cái id trả về thì không có id là 3, tôi ấn bừ
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/9bc7ae96-ee63-40d1-ac4e-40c3b4f803a5)
+
+Khi tôi thử tính năng log in với cred là admin:admin kết quả trả về là json
+
+![image](https://github.com/user-attachments/assets/e765cd4c-c419-487d-aabe-2c766a6c5089)
+
+Thêm cái extension InQL vào và bấm analyze thì ra cái này:
+
+![image](https://github.com/user-attachments/assets/002634d2-025d-4f94-acd9-e58437d2307a)
+
+Và ở đây có getUser là lấy username và password dựa trên id của user:
+
+![image](https://github.com/user-attachments/assets/cd9349b2-ba7a-4a78-a5f2-3a25e10519e9)
+
+Vào trong repeater và sửa thành getUser, id=1:
+
+![image](https://github.com/user-attachments/assets/2713b635-082c-4140-8db3-b4c08e2d9f99)
+
+![image](https://github.com/user-attachments/assets/cd950ab2-85b0-4c91-8d91-fed4caeaafb1)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
 
 
 
