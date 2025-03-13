@@ -154,9 +154,43 @@ Tìm cái success là true, ra mật khẩu là monitor
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/9b19389b-7895-432d-b0ec-6094d6b9b423)
 
+Đây là req login với cred wiener:peter 
 
+![image](https://github.com/user-attachments/assets/ced336d5-ec65-43f8-a056-a658a698cb7c)
 
+Tôi dùng IntrospectionQuery thì cũng chỉ ra thế này:
+
+![image](https://github.com/user-attachments/assets/4898cae3-710c-4815-975c-6fe94ee917bb)
+
+Vào target thì thấy cái changeEmail:
+
+![image](https://github.com/user-attachments/assets/a0f762c9-6f5f-42a6-81a5-72914c776740)
+
+Thêm cái `Content-Type: application/x-www-form-urlencoded` vào bằng cách change method qua GET rồi lại về POST:
+
+![image](https://github.com/user-attachments/assets/84691c59-d7bc-4ad9-934c-74d558976537)
+
+Gửi đi thì nó bảo Query not present, thêm cái query vào và gửi, nó bảo thiếu variables:
+
+![image](https://github.com/user-attachments/assets/e88ba5ea-6717-4f1f-bf73-f6cef6579a5e)
+
+Thêm cái variables vào là ra:
+
+![image](https://github.com/user-attachments/assets/c0b2a975-e815-4e96-895e-317efa65daba)
+
+query và variables dựa trên cái này:
+
+![image](https://github.com/user-attachments/assets/23910ab5-289c-41b3-8f33-ada92c868386)
+
+Nếu để im như này mà tạo PoC thì lúc đưa vào exploit nó bị invalid variables thế nên phải encode cái query và variables:
+
+![image](https://github.com/user-attachments/assets/08a93102-cdf0-42d6-93ef-42d92d8d4c5c)
+
+![image](https://github.com/user-attachments/assets/cab2b672-12c6-4e3e-89f5-4816939ec753)
+
+![image](https://github.com/user-attachments/assets/9d36a1c9-88ce-4ac2-a759-1b3942513238)
 
 
 
