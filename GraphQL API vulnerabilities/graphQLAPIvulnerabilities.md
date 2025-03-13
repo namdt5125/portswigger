@@ -111,6 +111,49 @@ Vào cái xóa và đổi id thành 3 là xong
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/6a7b8df0-002f-4101-b0d7-727f82f9fc73)
+
+Đây là req sau khi login:
+
+![image](https://github.com/user-attachments/assets/169dfd25-c478-430a-8fbc-78cbbd318402)
+
+Tôi login với wiener:peter thì được:
+
+![image](https://github.com/user-attachments/assets/2ce5b1ef-badb-45ee-ab17-b2eb48f5abda)
+
+Tôi ném vào intruder để brute force password và xuất hiện `You have made too many incorrect login attempts. Please try again in 1 minute(s)`
+
+![image](https://github.com/user-attachments/assets/80253b7d-f75f-46a5-bc1e-eb20cca94796)
+
+Tôi chèn thêm cái IntrospectionQuery vào thì trả lại cái này:
+
+![image](https://github.com/user-attachments/assets/ee1a341e-551c-4ee0-a290-d65dd4737fcf)
+
+![image](https://github.com/user-attachments/assets/5e93568d-240c-4c1a-b8d8-b5e9b983dd37)
+
+Và đây là cái GraphQL của bài:
+
+![image](https://github.com/user-attachments/assets/0e63a486-d4cc-4644-a101-9d61251b4d60)
+
+Ở hint có cho đoạn list of aliases corresponding, tôi đưa vào console và chạy, paste ra cái này:
+
+![image](https://github.com/user-attachments/assets/e0af16ba-c2c5-44ca-b599-09ddc599ffeb)
+
+![image](https://github.com/user-attachments/assets/cfab10c4-ade6-454e-9789-7c185b235553)
+
+Đưa vào trong GraphQL, sửa lại 1 chút là ra:
+
+![image](https://github.com/user-attachments/assets/f4e892bc-aca4-4ef9-a883-c5a2f7e157c1)
+
+Tìm cái success là true, ra mật khẩu là monitor
+
+![image](https://github.com/user-attachments/assets/b26b5b2e-7384-444b-b3ab-9752b1da22cc)
+
+![image](https://github.com/user-attachments/assets/6bd8e520-0f6d-4e5d-bd6e-2601419c88d7)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
 
 
 
