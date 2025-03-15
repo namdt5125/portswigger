@@ -16,3 +16,34 @@
 
 <h1>---------------------------------------------------------</h1>
 <br>
+
+![image](https://github.com/user-attachments/assets/63e82a38-bb0d-4ead-ba79-f48654f085a1)
+
+Lần này có cái access_token nên tôi thử sửa username thành admin:
+
+![image](https://github.com/user-attachments/assets/785b12a1-c036-408e-a2f4-52e51625acfe)
+
+![image](https://github.com/user-attachments/assets/0d71731d-cc94-44a2-92a0-cd5bb3ebf022)
+
+![image](https://github.com/user-attachments/assets/f0f6fc64-72eb-4464-bdce-d654fce3e446)
+
+Tôi sửa token thành i:0 tức là đổi sang dạng integer với giá trị là 0, trong chuỗi serialized PHP object, i:0; có nghĩa là giá trị của thuộc tính access_token là một số nguyên (integer) có giá trị 0.
+
+![image](https://github.com/user-attachments/assets/c6defdad-fa80-4035-9fd0-81ad80de66e5)
+
+![image](https://github.com/user-attachments/assets/be19b556-3cf1-4891-b081-89720f101b17)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
