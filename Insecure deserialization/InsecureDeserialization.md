@@ -90,12 +90,22 @@ Tôi sửa thành `O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/ca
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/30abc50a-23e9-489d-826e-e8908d9cae08)
 
+Lần này thì cookie nó không như trước nữa nên chắc không làm được gì:
 
+![image](https://github.com/user-attachments/assets/eeb38616-35cb-479f-afb7-749ba835245c)
 
+Search cái ysoserial thì ra cái này:
 
+![image](https://github.com/user-attachments/assets/a1dc782d-0693-415e-87c6-d82d8ab8853f)
 
+Sau vài lần thử thì cái CommonsCollections4 là dùng được:
 
+![image](https://github.com/user-attachments/assets/68f4b02e-791e-46bd-8b95-0ee4ad749fe9)
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
