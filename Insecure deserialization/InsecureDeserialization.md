@@ -36,7 +36,59 @@ Tôi sửa token thành i:0 tức là đổi sang dạng integer với giá tr�
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/ea457d0c-36a2-479a-92e4-a1815afd54cb)
 
+Đây là khi đăng nhập với wiener:peter thì ra như này:
+
+![image](https://github.com/user-attachments/assets/a0c208fa-af8a-4d32-874c-f74ec86a3bee)
+
+Và đây là cookie của wiener
+
+![image](https://github.com/user-attachments/assets/a47747d7-3107-4d4e-9059-7de4aec583ed)
+
+Và đây là req khi delete account wiener:
+
+![image](https://github.com/user-attachments/assets/9245f008-ba30-4cfc-bc6c-be9e5c7c8589)
+
+Do là xóa cái morale.txt của carlos nên tôi thử đổi thành /home/carlos/morale.txt và vẫn với req đấy:
+
+![image](https://github.com/user-attachments/assets/24ede55b-d19f-4120-8a05-abb9c568e65e)
+
+![image](https://github.com/user-attachments/assets/513df6a0-acce-4352-9e97-fad27e6c7871)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/5f39ae74-f80f-4194-8197-b9ad7669c318)
+
+Đây là req khi login wiener:peter 
+
+![image](https://github.com/user-attachments/assets/e3841cdf-6d7d-4c66-894a-ed78aa49ea0a)
+
+Tôi sửa thành carlos thì dính lỗi, có vẻ không làm được gì carlos 
+
+![image](https://github.com/user-attachments/assets/7d34724d-b2fa-4c6a-85a6-07361d27667a)
+
+Tôi xem trong target thì lấy cái /libs/CustomTemplate.php nhìn lạ lạ:
+
+![image](https://github.com/user-attachments/assets/e22b975f-bf4b-4fa9-a688-ff512d2f880e)
+
+Gửi thử nhưng chả có gì, cơ mà đã gửi được thì chắc phải có công dụng gì đó:
+
+![image](https://github.com/user-attachments/assets/4a71d3a7-3dd2-476c-af6b-9304b0a8affe)
+
+Trong hint thì có bảo dùng dấu ~ ở cuối thường là để backup:
+
+![image](https://github.com/user-attachments/assets/5b8e827a-d28e-4d35-a842-bf851f265342)
+
+Thêm dấu ~ vào cuối thì có toàn bộ src code, để ý cái hàm __destruct(), nó dùng để xóa file, mà cái này code kiểu hướng đối tượng nên tôi nghĩ là sẽ sửa cái cookie theo đối tượng:
+
+![image](https://github.com/user-attachments/assets/52f8ac59-a399-464a-bd0e-1094666af2f7)
+
+Tôi sửa thành `O:14:"CustomTemplate":1:{s:14:"lock_file_path";s:23:"/home/carlos/morale.txt";}` và được
+
+<h1>---------------------------------------------------------</h1>
+<br>
 
 
 
