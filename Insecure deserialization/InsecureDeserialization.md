@@ -100,9 +100,11 @@ Search cái ysoserial thì ra cái này:
 
 ![image](https://github.com/user-attachments/assets/a1dc782d-0693-415e-87c6-d82d8ab8853f)
 
-Sau vài lần thử thì cái CommonsCollections4 là dùng được:
+Sau vài lần thử thì cái CommonsCollections4 là dùng được, paste vào cookie và url encode tất cả:
 
 ![image](https://github.com/user-attachments/assets/68f4b02e-791e-46bd-8b95-0ee4ad749fe9)
+
+![image](https://github.com/user-attachments/assets/ec1a9249-2357-4946-8290-bfd88ea627eb)
 
 <h1>---------------------------------------------------------</h1>
 <br>
