@@ -70,5 +70,34 @@ Khi thêm X-Custom-IP-Authorization và đổi thành localhost là 127.0.0.1 th
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/d80926ae-6681-434d-88fc-324131f0556f)
+
+![image](https://github.com/user-attachments/assets/f0229168-4061-4b47-8dd5-71aba714a817)
+
+Do bài này có nhắc tới version control history nên tôi search thử thì ra cái này:
+
+![image](https://github.com/user-attachments/assets/7e3b61eb-a1c6-4f9e-94bf-3f47f633136e)
+
+Sau khi xem qua thì thêm cái .git vào là được:
+
+![image](https://github.com/user-attachments/assets/330a412a-abb4-48d0-8ff4-a9eacb3433f9)
+
+Tôi dùng `wget --mirror https://0a8300b304860fdb808958ec004e00e3.web-security-academy.net/.git` để tải các .git về máy:
+
+![image](https://github.com/user-attachments/assets/b987dfd6-b13e-4b0d-95c6-bcc5c04e814c)
+
+Kiểm tra log thì password của admin đã bị xóa:
+
+![image](https://github.com/user-attachments/assets/f5bdb89c-8e7c-49af-9cf2-ae8ad9f4e425)
+
+Lệnh git checkout b3a0f40b7d47b624022f007bd6381d360264458e quay lại hành động Add skeleton admin panel, sau đó ls thì thấy có admin.conf:
+
+![image](https://github.com/user-attachments/assets/64740214-b6aa-421c-b0b4-5d5f95e5c469)
+
+Và lấy được mật khẩu của admin:
+
+![image](https://github.com/user-attachments/assets/4b0869fd-c6a4-40fb-b1bb-66966e731569)
+
+
 
 
