@@ -43,6 +43,42 @@ Máy chủ dùng giá trị X-Forwarded-Host để tạo nội dung phản hồi
 <h1>---------------------------------------------------------</h1>
 <br>
 
+![image](https://github.com/user-attachments/assets/a279a5be-6e8c-4410-80d0-c0a4409e674f)
+
+Lần này thì trong cookie có xuất hiện cái `fehost=prod-cache-01`:
+
+![image](https://github.com/user-attachments/assets/2a7a0107-ccf8-4bc1-9587-6c6526a7b18f)
+
+Để ý thì nó xuất hiện cả ở response:
+
+![image](https://github.com/user-attachments/assets/76b77072-23b1-458d-9174-cfc37c7a09e0)
+
+Đổi cookie thành `Cookie: session=PktqGZ2VrSpmokFvEN5ZpaUDmisC29Ov; fehost=<script>alert(1)</script>` thì thấy có đổi màu, tức là thoát được cái string rồi:
+
+![image](https://github.com/user-attachments/assets/effbd3b0-acf1-44fc-af45-eac82058f165)
+
+Đổi thành `fehost=</script><script>alert(1)</script>` thì được:
+
+![image](https://github.com/user-attachments/assets/5e2cf410-ab05-405c-bda7-545c6186c803)
+
+![image](https://github.com/user-attachments/assets/9616abdc-d100-41bd-b894-430c60be492e)
+
+Hoặc có thể dùng `lmao"-alert(1)-"lmao` vì nó đang ở trong thẻ `<script>` rồi:
+
+![image](https://github.com/user-attachments/assets/29b00532-9fe1-4a6f-be92-099b2502705a)
+
+![image](https://github.com/user-attachments/assets/962dd1a3-ebce-48c9-9e77-ddf077438765)
+
+<h1>---------------------------------------------------------</h1>
+<br>
+
+
+
+
+
+
+
+
 
 
 
